@@ -28,7 +28,7 @@ def run_recbole(model=None, dataset=None, config_file_list=None, config_dict=Non
     """
     # configurations initialization
     config = Config(model=model, dataset=dataset, config_file_list=config_file_list, config_dict=config_dict)
-    # init_seed(config['seed'], config['reproducibility'])
+    init_seed(config['seed'], config['reproducibility'])
 
     # logger initialization
     init_logger(config)
@@ -59,6 +59,9 @@ def run_recbole(model=None, dataset=None, config_file_list=None, config_dict=Non
         train_data, valid_data, saved=saved, show_progress=config['show_progress']
     )
 
+    # VISUALIZATION CODE COMMENTED OUT FOR HPC RUNS (no display, seaborn not needed)
+    # Uncomment if you want embedding visualizations locally
+    """
     import numpy as np
     import seaborn as sns
     import matplotlib.pyplot as plt
@@ -105,6 +108,7 @@ def run_recbole(model=None, dataset=None, config_file_list=None, config_dict=Non
     plt.plot(svs)
     # plt.show()
     plt.savefig(log_dir + '/svs.pdf', format='pdf', transparent=False, bbox_inches='tight')
+    """
 
     # model evaluation
     test_result = trainer.evaluate(test_data, load_best_model=saved, show_progress=config['show_progress'])

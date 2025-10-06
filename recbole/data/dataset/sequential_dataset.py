@@ -85,7 +85,7 @@ class SequentialDataset(Dataset):
         self.item_list_index = np.array(item_list_index)
         self.target_index = np.array(target_index)
         self.item_list_length = np.array(item_list_length, dtype=np.int64)
-        self.mask = np.ones(len(self.inter_feat), dtype=np.bool)
+        self.mask = np.ones(len(self.inter_feat), dtype=bool)
 
     def semantic_augmentation(self, target_index):
         aug_path = self.config['data_path'] + '/semantic_augmentation.npy'
@@ -100,7 +100,8 @@ class SequentialDataset(Dataset):
                 delete_index = np.argwhere(all_index_same_id == index)
                 all_index_same_id_wo_self = np.delete(all_index_same_id, delete_index)
                 same_target_index.append(all_index_same_id_wo_self)
-            same_target_index = np.array(same_target_index)
+            # Create object array to handle variable-length subarrays
+            same_target_index = np.array(same_target_index, dtype=object)
             np.save(aug_path, same_target_index)
         
         return same_target_index
@@ -122,7 +123,7 @@ class SequentialDataset(Dataset):
             ds = copy.copy(self)
             for field in ['uid_list', 'item_list_index', 'target_index', 'item_list_length']:
                 setattr(ds, field, np.array(getattr(ds, field)[index]))
-            setattr(ds, 'mask', np.ones(len(self.inter_feat), dtype=np.bool))
+            setattr(ds, 'mask', np.ones(len(self.inter_feat), dtype=bool))
             next_ds.append(ds)
         next_ds[0].mask[self.target_index[next_index[1] + next_index[2]]] = False
         next_ds[1].mask[self.target_index[next_index[2]]] = False

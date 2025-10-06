@@ -1,0 +1,47 @@
+#!/bin/bash
+#PBS -N duorec_quick_est
+#PBS -P col8385.course
+#PBS -q standard
+#PBS -l select=1:ncpus=10:ngpus=1:mem=64G:centos=skylake
+#PBS -l walltime=06:00:00
+#PBS -o quick_estimate.log
+#PBS -e quick_estimate.err
+
+# Quick statistical estimate with fewer epochs
+# Use this to get rough mean ± std before committing to full runs
+
+cd ~/DuoRec
+source ~/miniconda3/bin/activate duorec
+
+RESULTS_DIR="./results_quick_estimate"
+mkdir -p $RESULTS_DIR
+
+SEEDS=(2020 2021 2022 2023 2024)
+
+echo "Starting quick estimate (10 epochs per seed)..."
+date
+
+# Delete cached files
+find dataset/ -name "*.npy" -delete
+
+for SEED in "${SEEDS[@]}"; do
+    echo ""
+    echo "Seed: $SEED | Time: $(date)"
+    
+    python run_seq.py \
+        --dataset='ml-1m' \
+        --train_batch_size=256 \
+        --lmd=0.1 \
+        --lmd_sem=0.1 \
+        --model='DuoRec' \
+        --contrast='us_x' \
+        --sim='dot' \
+        --tau=1 \
+        --seed=$SEED \
+        --epochs=10 \
+        --stopping_step=5 \
+        2>&1 | tee $RESULTS_DIR/seed_${SEED}.log
+done
+
+echo "All seeds completed! $(date)"
+python extract_metrics.py $RESULTS_DIR

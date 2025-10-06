@@ -399,7 +399,7 @@ class Dataset(object):
             ftype = self.field2type[field]
             if not ftype.value.endswith('seq'):
                 continue
-            df[field].fillna(value='', inplace=True)
+            df.loc[:, field] = df[field].fillna(value='')
             if ftype == FeatureType.TOKEN_SEQ:
                 df[field] = [np.array(list(filter(None, _.split(seq_separator)))) for _ in df[field].values]
             elif ftype == FeatureType.FLOAT_SEQ:
@@ -495,11 +495,11 @@ class Dataset(object):
             for field in feat:
                 ftype = self.field2type[field]
                 if ftype == FeatureType.TOKEN:
-                    feat[field].fillna(value=0, inplace=True)
+                    feat.loc[:, field] = feat[field].fillna(value=0)
                 elif ftype == FeatureType.FLOAT:
-                    feat[field].fillna(value=feat[field].mean(), inplace=True)
+                    feat.loc[:, field] = feat[field].fillna(value=feat[field].mean())
                 else:
-                    dtype = np.int64 if ftype == FeatureType.TOKEN_SEQ else np.float
+                    dtype = np.int64 if ftype == FeatureType.TOKEN_SEQ else np.float64
                     feat[field] = feat[field].apply(lambda x: np.array([], dtype=dtype) if isinstance(x, float) else x)
 
     def _normalize(self):

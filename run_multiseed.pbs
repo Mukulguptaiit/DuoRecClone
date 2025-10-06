@@ -1,0 +1,62 @@
+#!/bin/bash
+#PBS -N duorec_multiseed
+#PBS -P col8385.course
+#PBS -q standard
+#PBS -l select=1:ncpus=10:ngpus=1:mem=64G:centos=skylake
+#PBS -l walltime=24:00:00
+#PBS -o duorec_multiseed.log
+#PBS -e duorec_multiseed.err
+
+# Run DuoRec with multiple seeds for statistical analysis
+# This will give you results like: HR@10: 0.4523 ±0.0030
+
+cd ~/DuoRec
+source ~/miniconda3/bin/activate duorec
+
+# Create results directory
+RESULTS_DIR="./results_multiple_seeds"
+mkdir -p $RESULTS_DIR
+
+# Array of seeds (5 runs is standard in research papers)
+SEEDS=(2020 2021 2022 2023 2024)
+
+echo "Starting multiple seed experiments..."
+echo "====================================="
+date
+
+# Delete cached files before first run
+find dataset/ -name "*.npy" -delete
+
+# Run with each seed
+for SEED in "${SEEDS[@]}"; do
+    echo ""
+    echo "Running with seed: $SEED"
+    echo "Time: $(date)"
+    echo "-------------------"
+    
+    python run_seq.py \
+        --dataset='ml-1m' \
+        --train_batch_size=256 \
+        --lmd=0.1 \
+        --lmd_sem=0.1 \
+        --model='DuoRec' \
+        --contrast='us_x' \
+        --sim='dot' \
+        --tau=1 \
+        --seed=$SEED \
+        2>&1 | tee $RESULTS_DIR/seed_${SEED}.log
+    
+    echo "Completed seed: $SEED at $(date)"
+    echo ""
+done
+
+echo "====================================="
+echo "All seeds completed!"
+echo "End time: $(date)"
+echo ""
+
+# Calculate statistics
+echo "Calculating statistics..."
+python calculate_statistics.py $RESULTS_DIR
+
+echo "Done! Check results in: $RESULTS_DIR/statistics_summary.txt"
