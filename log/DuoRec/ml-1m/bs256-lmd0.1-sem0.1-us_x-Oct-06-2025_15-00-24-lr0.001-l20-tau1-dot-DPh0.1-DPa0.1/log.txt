@@ -1,0 +1,381 @@
+Mon 06 Oct 2025 15:00:24 INFO  
+[1;35mGeneral Hyper Parameters:
+[0m[1;36mgpu_id[0m =[1;33m 0[0m
+[1;36muse_gpu[0m =[1;33m True[0m
+[1;36mseed[0m =[1;33m 999[0m
+[1;36mstate[0m =[1;33m INFO[0m
+[1;36mreproducibility[0m =[1;33m True[0m
+[1;36mdata_path[0m =[1;33m ./dataset/ml-1m[0m
+[1;36mshow_progress[0m =[1;33m True[0m
+
+[1;35mTraining Hyper Parameters:
+[0m[1;36mcheckpoint_dir[0m =[1;33m saved[0m
+[1;36mepochs[0m =[1;33m 50[0m
+[1;36mtrain_batch_size[0m =[1;33m 256[0m
+[1;36mlearner[0m =[1;33m adam[0m
+[1;36mlearning_rate[0m =[1;33m 0.001[0m
+[1;36mtraining_neg_sample_num[0m =[1;33m 0[0m
+[1;36mtraining_neg_sample_distribution[0m =[1;33m uniform[0m
+[1;36meval_step[0m =[1;33m 1[0m
+[1;36mstopping_step[0m =[1;33m 10[0m
+[1;36mclip_grad_norm[0m =[1;33m None[0m
+[1;36mweight_decay[0m =[1;33m 0[0m
+[1;36mdraw_loss_pic[0m =[1;33m False[0m
+[1;36mloss_decimal_place[0m =[1;33m 4[0m
+
+[1;35mEvaluation Hyper Parameters:
+[0m[1;36meval_setting[0m =[1;33m TO_LS,full[0m
+[1;36mgroup_by_user[0m =[1;33m True[0m
+[1;36msplit_ratio[0m =[1;33m [0.8, 0.1, 0.1][0m
+[1;36mleave_one_num[0m =[1;33m 2[0m
+[1;36mreal_time_process[0m =[1;33m False[0m
+[1;36mmetrics[0m =[1;33m ['Recall', 'MRR', 'NDCG', 'Precision'][0m
+[1;36mtopk[0m =[1;33m [5, 10, 20, 50][0m
+[1;36mvalid_metric[0m =[1;33m MRR@10[0m
+[1;36meval_batch_size[0m =[1;33m 256[0m
+[1;36mmetric_decimal_place[0m =[1;33m 4[0m
+
+[1;35mDataset Hyper Parameters:
+[0m[1;36mfield_separator[0m =[1;33m 	[0m
+[1;36mseq_separator[0m =[1;33m  [0m
+[1;36mUSER_ID_FIELD[0m =[1;33m user_id[0m
+[1;36mITEM_ID_FIELD[0m =[1;33m item_id[0m
+[1;36mRATING_FIELD[0m =[1;33m rating[0m
+[1;36mTIME_FIELD[0m =[1;33m timestamp[0m
+[1;36mseq_len[0m =[1;33m None[0m
+[1;36mLABEL_FIELD[0m =[1;33m label[0m
+[1;36mthreshold[0m =[1;33m None[0m
+[1;36mNEG_PREFIX[0m =[1;33m neg_[0m
+[1;36mload_col[0m =[1;33m {'inter': ['user_id', 'item_id', 'rating', 'timestamp']}[0m
+[1;36munload_col[0m =[1;33m None[0m
+[1;36munused_col[0m =[1;33m None[0m
+[1;36madditional_feat_suffix[0m =[1;33m None[0m
+[1;36mlowest_val[0m =[1;33m None[0m
+[1;36mhighest_val[0m =[1;33m None[0m
+[1;36mequal_val[0m =[1;33m None[0m
+[1;36mnot_equal_val[0m =[1;33m None[0m
+[1;36mmax_user_inter_num[0m =[1;33m None[0m
+[1;36mmin_user_inter_num[0m =[1;33m 5[0m
+[1;36mmax_item_inter_num[0m =[1;33m None[0m
+[1;36mmin_item_inter_num[0m =[1;33m 5[0m
+[1;36mfields_in_same_space[0m =[1;33m None[0m
+[1;36mpreload_weight[0m =[1;33m None[0m
+[1;36mnormalize_field[0m =[1;33m None[0m
+[1;36mnormalize_all[0m =[1;33m None[0m
+[1;36mITEM_LIST_LENGTH_FIELD[0m =[1;33m item_length[0m
+[1;36mLIST_SUFFIX[0m =[1;33m _list[0m
+[1;36mMAX_ITEM_LIST_LENGTH[0m =[1;33m 50[0m
+[1;36mPOSITION_FIELD[0m =[1;33m position_id[0m
+[1;36mHEAD_ENTITY_ID_FIELD[0m =[1;33m head_id[0m
+[1;36mTAIL_ENTITY_ID_FIELD[0m =[1;33m tail_id[0m
+[1;36mRELATION_ID_FIELD[0m =[1;33m relation_id[0m
+[1;36mENTITY_ID_FIELD[0m =[1;33m entity_id[0m
+
+[1;35mOther Hyper Parameters: 
+[0m[1;36mvalid_metric_bigger[0m = [1;33mTrue[0m
+[1;36mn_layers[0m = [1;33m2[0m
+[1;36mn_heads[0m = [1;33m2[0m
+[1;36mhidden_size[0m = [1;33m64[0m
+[1;36minner_size[0m = [1;33m256[0m
+[1;36mhidden_dropout_prob[0m = [1;33m0.1[0m
+[1;36mattn_dropout_prob[0m = [1;33m0.1[0m
+[1;36mhidden_act[0m = [1;33mgelu[0m
+[1;36mlayer_norm_eps[0m = [1;33m1e-12[0m
+[1;36minitializer_range[0m = [1;33m0.02[0m
+[1;36mloss_type[0m = [1;33mCE[0m
+[1;36mlmd[0m = [1;33m0.1[0m
+[1;36mlmd_sem[0m = [1;33m0.1[0m
+[1;36mSSL_AUG[0m = [1;33mDuoRec[0m
+[1;36mrm_dup_inter[0m = [1;33mNone[0m
+[1;36mfilter_inter_by_user_or_item[0m = [1;33mTrue[0m
+[1;36mSOURCE_ID_FIELD[0m = [1;33msource_id[0m
+[1;36mTARGET_ID_FIELD[0m = [1;33mtarget_id[0m
+[1;36mbenchmark_filename[0m = [1;33mNone[0m
+[1;36mMODEL_TYPE[0m = [1;33mModelType.SEQUENTIAL[0m
+[1;36mlog_root[0m = [1;33m./log/[0m
+[1;36mtau[0m = [1;33m1[0m
+[1;36mcontrast[0m = [1;33mus_x[0m
+[1;36msim[0m = [1;33mdot[0m
+[1;36mMODEL_INPUT_TYPE[0m = [1;33mInputType.POINTWISE[0m
+[1;36meval_type[0m = [1;33mEvaluatorType.RANKING[0m
+[1;36mdevice[0m = [1;33mcuda[0m
+[1;36mtrain_neg_sample_args[0m = [1;33m{'strategy': 'none'}[0m
+[1;36mlog_dir[0m = [1;33m/home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1[0m
+
+
+Mon 06 Oct 2025 15:00:26 INFO  [1;35mml-1m[0m
+[1;34mThe number of users[0m: 6041
+[1;34mAverage actions of users[0m: 165.49850993377484
+[1;34mThe number of items[0m: 3417
+[1;34mAverage actions of items[0m: 292.6261709601874
+[1;34mThe number of inters[0m: 999611
+[1;34mThe sparsity of the dataset[0m: 95.15741545057172%
+[1;34mRemain Fields[0m: ['user_id', 'item_id', 'rating', 'timestamp']
+Mon 06 Oct 2025 15:00:39 INFO  [1;35mBuild[0m[1;33m [SequentialDataLoader][0m for [1;33m[train][0m with format [1;33m[InputType.POINTWISE][0m
+Mon 06 Oct 2025 15:00:39 INFO  [1;35m[train][0m[1;33m No Negative Sampling[0m
+Mon 06 Oct 2025 15:00:39 INFO  [1;35m[train][0m[1;36m batch_size[0m = [1;33m[256][0m, [1;36mshuffle[0m = [1;33m[True]
+[0m
+Mon 06 Oct 2025 15:01:06 INFO  [1;35mBuild[0m[1;33m [SequentialFullDataLoader][0m for [1;33m[evaluation][0m with format [1;33m[InputType.POINTWISE][0m
+Mon 06 Oct 2025 15:01:06 INFO  [1;35mEvaluation Setting:[0m
+	[1;34mGroup by[0m user_id
+	[1;34mOrdering[0m: {'strategy': 'by', 'field': 'timestamp', 'ascending': True}
+	[1;34mSplitting[0m: {'strategy': 'loo', 'leave_one_num': 2}
+	[1;34mNegative Sampling[0m: {'strategy': 'full', 'distribution': 'uniform'}
+Mon 06 Oct 2025 15:01:06 INFO  [1;35m[evaluation][0m[1;36m batch_size[0m = [1;33m[256][0m, [1;36mshuffle[0m = [1;33m[False]
+[0m
+Mon 06 Oct 2025 15:01:07 INFO  DuoRec(
+  (item_embedding): Embedding(3417, 64, padding_idx=0)
+  (position_embedding): Embedding(50, 64)
+  (trm_encoder): TransformerEncoder(
+    (layer): ModuleList(
+      (0-1): 2 x TransformerLayer(
+        (multi_head_attention): MultiHeadAttention(
+          (query): Linear(in_features=64, out_features=64, bias=True)
+          (key): Linear(in_features=64, out_features=64, bias=True)
+          (value): Linear(in_features=64, out_features=64, bias=True)
+          (attn_dropout): Dropout(p=0.1, inplace=False)
+          (dense): Linear(in_features=64, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (out_dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): FeedForward(
+          (dense_1): Linear(in_features=64, out_features=256, bias=True)
+          (dense_2): Linear(in_features=256, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+  )
+  (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+  (loss_fct): CrossEntropyLoss()
+  (aug_nce_fct): CrossEntropyLoss()
+  (sem_aug_nce_fct): CrossEntropyLoss()
+)[1;34m
+Trainable parameters[0m: 321984
+Mon 06 Oct 2025 15:03:42 INFO  [1;32mepoch 0 training[0m [[1;34mtime[0m: 152.52s, [1;34mtrain loss[0m: 28680.4964]
+Mon 06 Oct 2025 15:03:43 INFO  [1;32mepoch 0 evaluating[0m [[1;34mtime[0m: 0.17s, [1;34mvalid_score[0m: 0.060900]
+Mon 06 Oct 2025 15:03:43 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.1051    recall@10 : 0.1687    recall@20 : 0.2505    recall@50 : 0.3978    mrr@5 : 0.0526    mrr@10 : 0.0609    mrr@20 : 0.0665    mrr@50 : 0.0711    ndcg@5 : 0.0655    ndcg@10 : 0.0859    ndcg@20 : 0.1065    ndcg@50 : 0.1356    precision@5 : 0.021    precision@10 : 0.0169    precision@20 : 0.0125    precision@50 : 0.008    
+Mon 06 Oct 2025 15:03:43 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:06:43 INFO  [1;32mepoch 1 training[0m [[1;34mtime[0m: 180.10s, [1;34mtrain loss[0m: 25008.3772]
+Mon 06 Oct 2025 15:06:43 INFO  [1;32mepoch 1 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.090700]
+Mon 06 Oct 2025 15:06:43 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.1555    recall@10 : 0.2321    recall@20 : 0.3359    recall@50 : 0.4886    mrr@5 : 0.0806    mrr@10 : 0.0907    mrr@20 : 0.0978    mrr@50 : 0.1026    ndcg@5 : 0.0991    ndcg@10 : 0.1237    ndcg@20 : 0.1498    ndcg@50 : 0.18    precision@5 : 0.0311    precision@10 : 0.0232    precision@20 : 0.0168    precision@50 : 0.0098    
+Mon 06 Oct 2025 15:06:43 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:10:16 INFO  [1;32mepoch 2 training[0m [[1;34mtime[0m: 212.56s, [1;34mtrain loss[0m: 23751.5044]
+Mon 06 Oct 2025 15:10:16 INFO  [1;32mepoch 2 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.103300]
+Mon 06 Oct 2025 15:10:16 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.1689    recall@10 : 0.2618    recall@20 : 0.3623    recall@50 : 0.518    mrr@5 : 0.0911    mrr@10 : 0.1033    mrr@20 : 0.1102    mrr@50 : 0.1152    ndcg@5 : 0.1103    ndcg@10 : 0.1401    ndcg@20 : 0.1655    ndcg@50 : 0.1965    precision@5 : 0.0338    precision@10 : 0.0262    precision@20 : 0.0181    precision@50 : 0.0104    
+Mon 06 Oct 2025 15:10:16 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:13:48 INFO  [1;32mepoch 3 training[0m [[1;34mtime[0m: 212.59s, [1;34mtrain loss[0m: 23136.7752]
+Mon 06 Oct 2025 15:13:49 INFO  [1;32mepoch 3 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.106600]
+Mon 06 Oct 2025 15:13:49 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.1775    recall@10 : 0.2702    recall@20 : 0.3795    recall@50 : 0.5434    mrr@5 : 0.0942    mrr@10 : 0.1066    mrr@20 : 0.1141    mrr@50 : 0.1193    ndcg@5 : 0.1148    ndcg@10 : 0.1447    ndcg@20 : 0.1723    ndcg@50 : 0.2049    precision@5 : 0.0355    precision@10 : 0.027    precision@20 : 0.019    precision@50 : 0.0109    
+Mon 06 Oct 2025 15:13:49 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:17:21 INFO  [1;32mepoch 4 training[0m [[1;34mtime[0m: 212.54s, [1;34mtrain loss[0m: 22771.8580]
+Mon 06 Oct 2025 15:17:21 INFO  [1;32mepoch 4 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.112900]
+Mon 06 Oct 2025 15:17:21 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.1853    recall@10 : 0.2743    recall@20 : 0.3869    recall@50 : 0.5505    mrr@5 : 0.1011    mrr@10 : 0.1129    mrr@20 : 0.1206    mrr@50 : 0.1258    ndcg@5 : 0.1219    ndcg@10 : 0.1506    ndcg@20 : 0.179    ndcg@50 : 0.2114    precision@5 : 0.0371    precision@10 : 0.0274    precision@20 : 0.0193    precision@50 : 0.011    
+Mon 06 Oct 2025 15:17:21 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:20:54 INFO  [1;32mepoch 5 training[0m [[1;34mtime[0m: 212.49s, [1;34mtrain loss[0m: 22522.5893]
+Mon 06 Oct 2025 15:20:54 INFO  [1;32mepoch 5 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.114700]
+Mon 06 Oct 2025 15:20:54 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.1925    recall@10 : 0.2844    recall@20 : 0.3932    recall@50 : 0.5533    mrr@5 : 0.1025    mrr@10 : 0.1147    mrr@20 : 0.1223    mrr@50 : 0.1274    ndcg@5 : 0.1247    ndcg@10 : 0.1544    ndcg@20 : 0.1819    ndcg@50 : 0.2137    precision@5 : 0.0385    precision@10 : 0.0284    precision@20 : 0.0197    precision@50 : 0.0111    
+Mon 06 Oct 2025 15:20:54 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:24:29 INFO  [1;32mepoch 6 training[0m [[1;34mtime[0m: 214.85s, [1;34mtrain loss[0m: 22336.9416]
+Mon 06 Oct 2025 15:24:29 INFO  [1;32mepoch 6 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.118100]
+Mon 06 Oct 2025 15:24:29 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.1944    recall@10 : 0.2916    recall@20 : 0.4053    recall@50 : 0.5601    mrr@5 : 0.1052    mrr@10 : 0.1181    mrr@20 : 0.1259    mrr@50 : 0.1309    ndcg@5 : 0.1272    ndcg@10 : 0.1585    ndcg@20 : 0.1872    ndcg@50 : 0.218    precision@5 : 0.0389    precision@10 : 0.0292    precision@20 : 0.0203    precision@50 : 0.0112    
+Mon 06 Oct 2025 15:24:29 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:28:02 INFO  [1;32mepoch 7 training[0m [[1;34mtime[0m: 212.53s, [1;34mtrain loss[0m: 22193.9406]
+Mon 06 Oct 2025 15:28:02 INFO  [1;32mepoch 7 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.120300]
+Mon 06 Oct 2025 15:28:02 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.1967    recall@10 : 0.2904    recall@20 : 0.4075    recall@50 : 0.5614    mrr@5 : 0.1078    mrr@10 : 0.1203    mrr@20 : 0.1283    mrr@50 : 0.1334    ndcg@5 : 0.1297    ndcg@10 : 0.1601    ndcg@20 : 0.1895    ndcg@50 : 0.2203    precision@5 : 0.0393    precision@10 : 0.029    precision@20 : 0.0204    precision@50 : 0.0112    
+Mon 06 Oct 2025 15:28:02 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:31:25 INFO  [1;32mepoch 8 training[0m [[1;34mtime[0m: 202.89s, [1;34mtrain loss[0m: 22079.2121]
+Mon 06 Oct 2025 15:31:25 INFO  [1;32mepoch 8 evaluating[0m [[1;34mtime[0m: 0.20s, [1;34mvalid_score[0m: 0.119300]
+Mon 06 Oct 2025 15:31:25 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.195    recall@10 : 0.2927    recall@20 : 0.4035    recall@50 : 0.5646    mrr@5 : 0.1063    mrr@10 : 0.1193    mrr@20 : 0.127    mrr@50 : 0.1322    ndcg@5 : 0.1282    ndcg@10 : 0.1597    ndcg@20 : 0.1877    ndcg@50 : 0.2199    precision@5 : 0.039    precision@10 : 0.0293    precision@20 : 0.0202    precision@50 : 0.0113    
+Mon 06 Oct 2025 15:34:59 INFO  [1;32mepoch 9 training[0m [[1;34mtime[0m: 213.70s, [1;34mtrain loss[0m: 21983.5779]
+Mon 06 Oct 2025 15:34:59 INFO  [1;32mepoch 9 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.124200]
+Mon 06 Oct 2025 15:34:59 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.203    recall@10 : 0.2992    recall@20 : 0.4118    recall@50 : 0.5714    mrr@5 : 0.1115    mrr@10 : 0.1242    mrr@20 : 0.132    mrr@50 : 0.1371    ndcg@5 : 0.1341    ndcg@10 : 0.165    ndcg@20 : 0.1935    ndcg@50 : 0.2251    precision@5 : 0.0406    precision@10 : 0.0299    precision@20 : 0.0206    precision@50 : 0.0114    
+Mon 06 Oct 2025 15:34:59 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:38:32 INFO  [1;32mepoch 10 training[0m [[1;34mtime[0m: 212.91s, [1;34mtrain loss[0m: 21900.6341]
+Mon 06 Oct 2025 15:38:32 INFO  [1;32mepoch 10 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.122500]
+Mon 06 Oct 2025 15:38:32 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.201    recall@10 : 0.2974    recall@20 : 0.4111    recall@50 : 0.5677    mrr@5 : 0.1097    mrr@10 : 0.1225    mrr@20 : 0.1304    mrr@50 : 0.1354    ndcg@5 : 0.1322    ndcg@10 : 0.1633    ndcg@20 : 0.1921    ndcg@50 : 0.2233    precision@5 : 0.0402    precision@10 : 0.0297    precision@20 : 0.0206    precision@50 : 0.0114    
+Mon 06 Oct 2025 15:42:05 INFO  [1;32mepoch 11 training[0m [[1;34mtime[0m: 212.68s, [1;34mtrain loss[0m: 21828.6145]
+Mon 06 Oct 2025 15:42:05 INFO  [1;32mepoch 11 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.126400]
+Mon 06 Oct 2025 15:42:05 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2038    recall@10 : 0.3041    recall@20 : 0.4126    recall@50 : 0.5717    mrr@5 : 0.1131    mrr@10 : 0.1264    mrr@20 : 0.1339    mrr@50 : 0.1391    ndcg@5 : 0.1355    ndcg@10 : 0.1678    ndcg@20 : 0.1951    ndcg@50 : 0.2269    precision@5 : 0.0408    precision@10 : 0.0304    precision@20 : 0.0206    precision@50 : 0.0114    
+Mon 06 Oct 2025 15:42:05 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:45:38 INFO  [1;32mepoch 12 training[0m [[1;34mtime[0m: 212.64s, [1;34mtrain loss[0m: 21772.9653]
+Mon 06 Oct 2025 15:45:38 INFO  [1;32mepoch 12 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.128600]
+Mon 06 Oct 2025 15:45:38 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2078    recall@10 : 0.2998    recall@20 : 0.4154    recall@50 : 0.5675    mrr@5 : 0.1162    mrr@10 : 0.1286    mrr@20 : 0.1366    mrr@50 : 0.1416    ndcg@5 : 0.1389    ndcg@10 : 0.1687    ndcg@20 : 0.1979    ndcg@50 : 0.2284    precision@5 : 0.0416    precision@10 : 0.03    precision@20 : 0.0208    precision@50 : 0.0114    
+Mon 06 Oct 2025 15:45:38 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:49:11 INFO  [1;32mepoch 13 training[0m [[1;34mtime[0m: 212.70s, [1;34mtrain loss[0m: 21719.7135]
+Mon 06 Oct 2025 15:49:11 INFO  [1;32mepoch 13 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.127200]
+Mon 06 Oct 2025 15:49:11 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2096    recall@10 : 0.3058    recall@20 : 0.4127    recall@50 : 0.5705    mrr@5 : 0.1142    mrr@10 : 0.1272    mrr@20 : 0.1345    mrr@50 : 0.1397    ndcg@5 : 0.1377    ndcg@10 : 0.1689    ndcg@20 : 0.1959    ndcg@50 : 0.2275    precision@5 : 0.0419    precision@10 : 0.0306    precision@20 : 0.0206    precision@50 : 0.0114    
+Mon 06 Oct 2025 15:52:44 INFO  [1;32mepoch 14 training[0m [[1;34mtime[0m: 212.66s, [1;34mtrain loss[0m: 21666.3205]
+Mon 06 Oct 2025 15:52:44 INFO  [1;32mepoch 14 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.131100]
+Mon 06 Oct 2025 15:52:44 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2154    recall@10 : 0.3126    recall@20 : 0.4207    recall@50 : 0.5786    mrr@5 : 0.1184    mrr@10 : 0.1311    mrr@20 : 0.1386    mrr@50 : 0.1436    ndcg@5 : 0.1422    ndcg@10 : 0.1734    ndcg@20 : 0.2007    ndcg@50 : 0.2321    precision@5 : 0.0431    precision@10 : 0.0313    precision@20 : 0.021    precision@50 : 0.0116    
+Mon 06 Oct 2025 15:52:44 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:56:16 INFO  [1;32mepoch 15 training[0m [[1;34mtime[0m: 212.28s, [1;34mtrain loss[0m: 21624.9279]
+Mon 06 Oct 2025 15:56:16 INFO  [1;32mepoch 15 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.131500]
+Mon 06 Oct 2025 15:56:16 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2118    recall@10 : 0.3094    recall@20 : 0.4224    recall@50 : 0.5742    mrr@5 : 0.1185    mrr@10 : 0.1315    mrr@20 : 0.1393    mrr@50 : 0.1441    ndcg@5 : 0.1415    ndcg@10 : 0.173    ndcg@20 : 0.2015    ndcg@50 : 0.2317    precision@5 : 0.0424    precision@10 : 0.0309    precision@20 : 0.0211    precision@50 : 0.0115    
+Mon 06 Oct 2025 15:56:16 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 15:59:49 INFO  [1;32mepoch 16 training[0m [[1;34mtime[0m: 212.48s, [1;34mtrain loss[0m: 21579.8211]
+Mon 06 Oct 2025 15:59:49 INFO  [1;32mepoch 16 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.132900]
+Mon 06 Oct 2025 15:59:49 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2144    recall@10 : 0.3131    recall@20 : 0.426    recall@50 : 0.5788    mrr@5 : 0.1199    mrr@10 : 0.1329    mrr@20 : 0.1407    mrr@50 : 0.1456    ndcg@5 : 0.1432    ndcg@10 : 0.1749    ndcg@20 : 0.2034    ndcg@50 : 0.2338    precision@5 : 0.0429    precision@10 : 0.0313    precision@20 : 0.0213    precision@50 : 0.0116    
+Mon 06 Oct 2025 15:59:49 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 16:03:22 INFO  [1;32mepoch 17 training[0m [[1;34mtime[0m: 212.35s, [1;34mtrain loss[0m: 21544.9656]
+Mon 06 Oct 2025 16:03:22 INFO  [1;32mepoch 17 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.134100]
+Mon 06 Oct 2025 16:03:22 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2116    recall@10 : 0.3172    recall@20 : 0.4214    recall@50 : 0.5781    mrr@5 : 0.1201    mrr@10 : 0.1341    mrr@20 : 0.1413    mrr@50 : 0.1463    ndcg@5 : 0.1426    ndcg@10 : 0.1767    ndcg@20 : 0.203    ndcg@50 : 0.2342    precision@5 : 0.0423    precision@10 : 0.0317    precision@20 : 0.0211    precision@50 : 0.0116    
+Mon 06 Oct 2025 16:03:22 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 16:06:27 INFO  [1;32mepoch 18 training[0m [[1;34mtime[0m: 185.12s, [1;34mtrain loss[0m: 21507.2956]
+Mon 06 Oct 2025 16:06:27 INFO  [1;32mepoch 18 evaluating[0m [[1;34mtime[0m: 0.13s, [1;34mvalid_score[0m: 0.134000]
+Mon 06 Oct 2025 16:06:27 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2152    recall@10 : 0.3111    recall@20 : 0.4253    recall@50 : 0.5806    mrr@5 : 0.1212    mrr@10 : 0.134    mrr@20 : 0.1419    mrr@50 : 0.1469    ndcg@5 : 0.1444    ndcg@10 : 0.1754    ndcg@20 : 0.2042    ndcg@50 : 0.2352    precision@5 : 0.043    precision@10 : 0.0311    precision@20 : 0.0213    precision@50 : 0.0116    
+Mon 06 Oct 2025 16:09:39 INFO  [1;32mepoch 19 training[0m [[1;34mtime[0m: 191.63s, [1;34mtrain loss[0m: 21470.0421]
+Mon 06 Oct 2025 16:09:39 INFO  [1;32mepoch 19 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.137100]
+Mon 06 Oct 2025 16:09:39 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2156    recall@10 : 0.3152    recall@20 : 0.4293    recall@50 : 0.5768    mrr@5 : 0.1237    mrr@10 : 0.1371    mrr@20 : 0.145    mrr@50 : 0.1498    ndcg@5 : 0.1464    ndcg@10 : 0.1787    ndcg@20 : 0.2076    ndcg@50 : 0.2369    precision@5 : 0.0431    precision@10 : 0.0315    precision@20 : 0.0215    precision@50 : 0.0115    
+Mon 06 Oct 2025 16:09:39 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 16:13:12 INFO  [1;32mepoch 20 training[0m [[1;34mtime[0m: 213.20s, [1;34mtrain loss[0m: 21425.7437]
+Mon 06 Oct 2025 16:13:12 INFO  [1;32mepoch 20 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.138500]
+Mon 06 Oct 2025 16:13:12 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2179    recall@10 : 0.3197    recall@20 : 0.4305    recall@50 : 0.5821    mrr@5 : 0.1249    mrr@10 : 0.1385    mrr@20 : 0.1462    mrr@50 : 0.1511    ndcg@5 : 0.1479    ndcg@10 : 0.1808    ndcg@20 : 0.2088    ndcg@50 : 0.239    precision@5 : 0.0436    precision@10 : 0.032    precision@20 : 0.0215    precision@50 : 0.0116    
+Mon 06 Oct 2025 16:13:12 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 16:16:46 INFO  [1;32mepoch 21 training[0m [[1;34mtime[0m: 213.41s, [1;34mtrain loss[0m: 21389.5561]
+Mon 06 Oct 2025 16:16:46 INFO  [1;32mepoch 21 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.136900]
+Mon 06 Oct 2025 16:16:46 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2192    recall@10 : 0.3161    recall@20 : 0.4301    recall@50 : 0.5825    mrr@5 : 0.1243    mrr@10 : 0.1369    mrr@20 : 0.1449    mrr@50 : 0.1498    ndcg@5 : 0.1477    ndcg@10 : 0.1788    ndcg@20 : 0.2076    ndcg@50 : 0.2379    precision@5 : 0.0438    precision@10 : 0.0316    precision@20 : 0.0215    precision@50 : 0.0116    
+Mon 06 Oct 2025 16:20:19 INFO  [1;32mepoch 22 training[0m [[1;34mtime[0m: 213.05s, [1;34mtrain loss[0m: 21358.9158]
+Mon 06 Oct 2025 16:20:19 INFO  [1;32mepoch 22 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.140300]
+Mon 06 Oct 2025 16:20:19 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2217    recall@10 : 0.3235    recall@20 : 0.4323    recall@50 : 0.5833    mrr@5 : 0.1268    mrr@10 : 0.1403    mrr@20 : 0.1479    mrr@50 : 0.1527    ndcg@5 : 0.1502    ndcg@10 : 0.1831    ndcg@20 : 0.2106    ndcg@50 : 0.2407    precision@5 : 0.0443    precision@10 : 0.0324    precision@20 : 0.0216    precision@50 : 0.0117    
+Mon 06 Oct 2025 16:20:19 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 16:23:52 INFO  [1;32mepoch 23 training[0m [[1;34mtime[0m: 213.18s, [1;34mtrain loss[0m: 21331.4981]
+Mon 06 Oct 2025 16:23:53 INFO  [1;32mepoch 23 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.135800]
+Mon 06 Oct 2025 16:23:53 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2142    recall@10 : 0.3134    recall@20 : 0.4295    recall@50 : 0.5803    mrr@5 : 0.1228    mrr@10 : 0.1358    mrr@20 : 0.1439    mrr@50 : 0.1488    ndcg@5 : 0.1453    ndcg@10 : 0.1772    ndcg@20 : 0.2066    ndcg@50 : 0.2367    precision@5 : 0.0428    precision@10 : 0.0313    precision@20 : 0.0215    precision@50 : 0.0116    
+Mon 06 Oct 2025 16:27:25 INFO  [1;32mepoch 24 training[0m [[1;34mtime[0m: 212.36s, [1;34mtrain loss[0m: 21308.3740]
+Mon 06 Oct 2025 16:27:25 INFO  [1;32mepoch 24 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.138500]
+Mon 06 Oct 2025 16:27:25 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2219    recall@10 : 0.3228    recall@20 : 0.4296    recall@50 : 0.5785    mrr@5 : 0.1251    mrr@10 : 0.1385    mrr@20 : 0.1459    mrr@50 : 0.1507    ndcg@5 : 0.1489    ndcg@10 : 0.1815    ndcg@20 : 0.2085    ndcg@50 : 0.2382    precision@5 : 0.0444    precision@10 : 0.0323    precision@20 : 0.0215    precision@50 : 0.0116    
+Mon 06 Oct 2025 16:30:58 INFO  [1;32mepoch 25 training[0m [[1;34mtime[0m: 213.25s, [1;34mtrain loss[0m: 21286.1797]
+Mon 06 Oct 2025 16:30:59 INFO  [1;32mepoch 25 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.139100]
+Mon 06 Oct 2025 16:30:59 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2202    recall@10 : 0.3182    recall@20 : 0.43    recall@50 : 0.5811    mrr@5 : 0.1261    mrr@10 : 0.1391    mrr@20 : 0.1469    mrr@50 : 0.1518    ndcg@5 : 0.1494    ndcg@10 : 0.181    ndcg@20 : 0.2093    ndcg@50 : 0.2394    precision@5 : 0.044    precision@10 : 0.0318    precision@20 : 0.0215    precision@50 : 0.0116    
+Mon 06 Oct 2025 16:34:32 INFO  [1;32mepoch 26 training[0m [[1;34mtime[0m: 213.26s, [1;34mtrain loss[0m: 21269.9156]
+Mon 06 Oct 2025 16:34:32 INFO  [1;32mepoch 26 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.137000]
+Mon 06 Oct 2025 16:34:32 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.222    recall@10 : 0.3227    recall@20 : 0.4311    recall@50 : 0.5873    mrr@5 : 0.1236    mrr@10 : 0.137    mrr@20 : 0.1444    mrr@50 : 0.1495    ndcg@5 : 0.1479    ndcg@10 : 0.1804    ndcg@20 : 0.2077    ndcg@50 : 0.2389    precision@5 : 0.0444    precision@10 : 0.0323    precision@20 : 0.0216    precision@50 : 0.0117    
+Mon 06 Oct 2025 16:38:05 INFO  [1;32mepoch 27 training[0m [[1;34mtime[0m: 213.18s, [1;34mtrain loss[0m: 21253.8785]
+Mon 06 Oct 2025 16:38:06 INFO  [1;32mepoch 27 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.141300]
+Mon 06 Oct 2025 16:38:06 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2222    recall@10 : 0.326    recall@20 : 0.4329    recall@50 : 0.5858    mrr@5 : 0.1276    mrr@10 : 0.1413    mrr@20 : 0.1489    mrr@50 : 0.1538    ndcg@5 : 0.151    ndcg@10 : 0.1844    ndcg@20 : 0.2116    ndcg@50 : 0.242    precision@5 : 0.0444    precision@10 : 0.0326    precision@20 : 0.0216    precision@50 : 0.0117    
+Mon 06 Oct 2025 16:38:06 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 16:41:38 INFO  [1;32mepoch 28 training[0m [[1;34mtime[0m: 212.87s, [1;34mtrain loss[0m: 21238.7196]
+Mon 06 Oct 2025 16:41:39 INFO  [1;32mepoch 28 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.139500]
+Mon 06 Oct 2025 16:41:39 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2253    recall@10 : 0.324    recall@20 : 0.4306    recall@50 : 0.5834    mrr@5 : 0.1264    mrr@10 : 0.1395    mrr@20 : 0.147    mrr@50 : 0.1519    ndcg@5 : 0.1508    ndcg@10 : 0.1827    ndcg@20 : 0.2097    ndcg@50 : 0.2401    precision@5 : 0.0451    precision@10 : 0.0324    precision@20 : 0.0215    precision@50 : 0.0117    
+Mon 06 Oct 2025 16:45:12 INFO  [1;32mepoch 29 training[0m [[1;34mtime[0m: 213.16s, [1;34mtrain loss[0m: 21227.3853]
+Mon 06 Oct 2025 16:45:12 INFO  [1;32mepoch 29 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.139800]
+Mon 06 Oct 2025 16:45:12 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2243    recall@10 : 0.325    recall@20 : 0.4338    recall@50 : 0.5871    mrr@5 : 0.1265    mrr@10 : 0.1398    mrr@20 : 0.1473    mrr@50 : 0.1522    ndcg@5 : 0.1506    ndcg@10 : 0.183    ndcg@20 : 0.2105    ndcg@50 : 0.241    precision@5 : 0.0449    precision@10 : 0.0325    precision@20 : 0.0217    precision@50 : 0.0117    
+Mon 06 Oct 2025 16:48:45 INFO  [1;32mepoch 30 training[0m [[1;34mtime[0m: 213.21s, [1;34mtrain loss[0m: 21212.6011]
+Mon 06 Oct 2025 16:48:45 INFO  [1;32mepoch 30 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.139600]
+Mon 06 Oct 2025 16:48:45 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2235    recall@10 : 0.3267    recall@20 : 0.4361    recall@50 : 0.5863    mrr@5 : 0.1259    mrr@10 : 0.1396    mrr@20 : 0.1472    mrr@50 : 0.152    ndcg@5 : 0.15    ndcg@10 : 0.1833    ndcg@20 : 0.2109    ndcg@50 : 0.2407    precision@5 : 0.0447    precision@10 : 0.0327    precision@20 : 0.0218    precision@50 : 0.0117    
+Mon 06 Oct 2025 16:52:19 INFO  [1;32mepoch 31 training[0m [[1;34mtime[0m: 213.22s, [1;34mtrain loss[0m: 21200.3495]
+Mon 06 Oct 2025 16:52:19 INFO  [1;32mepoch 31 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.142400]
+Mon 06 Oct 2025 16:52:19 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2222    recall@10 : 0.3197    recall@20 : 0.4333    recall@50 : 0.5849    mrr@5 : 0.1296    mrr@10 : 0.1424    mrr@20 : 0.1503    mrr@50 : 0.1552    ndcg@5 : 0.1525    ndcg@10 : 0.1838    ndcg@20 : 0.2125    ndcg@50 : 0.2427    precision@5 : 0.0444    precision@10 : 0.032    precision@20 : 0.0217    precision@50 : 0.0117    
+Mon 06 Oct 2025 16:52:19 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 16:55:52 INFO  [1;32mepoch 32 training[0m [[1;34mtime[0m: 213.15s, [1;34mtrain loss[0m: 21187.2835]
+Mon 06 Oct 2025 16:55:52 INFO  [1;32mepoch 32 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.142300]
+Mon 06 Oct 2025 16:55:52 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.223    recall@10 : 0.3215    recall@20 : 0.4354    recall@50 : 0.5838    mrr@5 : 0.1293    mrr@10 : 0.1423    mrr@20 : 0.1502    mrr@50 : 0.1549    ndcg@5 : 0.1525    ndcg@10 : 0.1841    ndcg@20 : 0.213    ndcg@50 : 0.2424    precision@5 : 0.0446    precision@10 : 0.0322    precision@20 : 0.0218    precision@50 : 0.0117    
+Mon 06 Oct 2025 16:59:25 INFO  [1;32mepoch 33 training[0m [[1;34mtime[0m: 213.21s, [1;34mtrain loss[0m: 21182.0224]
+Mon 06 Oct 2025 16:59:26 INFO  [1;32mepoch 33 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.143600]
+Mon 06 Oct 2025 16:59:26 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2247    recall@10 : 0.3265    recall@20 : 0.4359    recall@50 : 0.5886    mrr@5 : 0.1302    mrr@10 : 0.1436    mrr@20 : 0.1511    mrr@50 : 0.156    ndcg@5 : 0.1535    ndcg@10 : 0.1863    ndcg@20 : 0.2139    ndcg@50 : 0.2441    precision@5 : 0.0449    precision@10 : 0.0326    precision@20 : 0.0218    precision@50 : 0.0118    
+Mon 06 Oct 2025 16:59:26 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 17:02:58 INFO  [1;32mepoch 34 training[0m [[1;34mtime[0m: 212.42s, [1;34mtrain loss[0m: 21167.4664]
+Mon 06 Oct 2025 17:02:58 INFO  [1;32mepoch 34 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.139700]
+Mon 06 Oct 2025 17:02:58 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.221    recall@10 : 0.3222    recall@20 : 0.4316    recall@50 : 0.582    mrr@5 : 0.1265    mrr@10 : 0.1397    mrr@20 : 0.1474    mrr@50 : 0.1522    ndcg@5 : 0.1499    ndcg@10 : 0.1823    ndcg@20 : 0.21    ndcg@50 : 0.24    precision@5 : 0.0442    precision@10 : 0.0322    precision@20 : 0.0216    precision@50 : 0.0116    
+Mon 06 Oct 2025 17:06:32 INFO  [1;32mepoch 35 training[0m [[1;34mtime[0m: 213.26s, [1;34mtrain loss[0m: 21162.4041]
+Mon 06 Oct 2025 17:06:32 INFO  [1;32mepoch 35 evaluating[0m [[1;34mtime[0m: 0.21s, [1;34mvalid_score[0m: 0.141700]
+Mon 06 Oct 2025 17:06:32 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2235    recall@10 : 0.3225    recall@20 : 0.4338    recall@50 : 0.5856    mrr@5 : 0.1286    mrr@10 : 0.1417    mrr@20 : 0.1494    mrr@50 : 0.1543    ndcg@5 : 0.1521    ndcg@10 : 0.1839    ndcg@20 : 0.2121    ndcg@50 : 0.2423    precision@5 : 0.0447    precision@10 : 0.0323    precision@20 : 0.0217    precision@50 : 0.0117    
+Mon 06 Oct 2025 17:09:25 INFO  [1;32mepoch 36 training[0m [[1;34mtime[0m: 173.52s, [1;34mtrain loss[0m: 21156.8173]
+Mon 06 Oct 2025 17:09:25 INFO  [1;32mepoch 36 evaluating[0m [[1;34mtime[0m: 0.13s, [1;34mvalid_score[0m: 0.141400]
+Mon 06 Oct 2025 17:09:25 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2272    recall@10 : 0.3291    recall@20 : 0.4334    recall@50 : 0.5889    mrr@5 : 0.1278    mrr@10 : 0.1414    mrr@20 : 0.1486    mrr@50 : 0.1536    ndcg@5 : 0.1523    ndcg@10 : 0.1852    ndcg@20 : 0.2116    ndcg@50 : 0.2425    precision@5 : 0.0454    precision@10 : 0.0329    precision@20 : 0.0217    precision@50 : 0.0118    
+Mon 06 Oct 2025 17:11:58 INFO  [1;32mepoch 37 training[0m [[1;34mtime[0m: 152.40s, [1;34mtrain loss[0m: 21145.9579]
+Mon 06 Oct 2025 17:11:58 INFO  [1;32mepoch 37 evaluating[0m [[1;34mtime[0m: 0.20s, [1;34mvalid_score[0m: 0.143400]
+Mon 06 Oct 2025 17:11:58 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2308    recall@10 : 0.3283    recall@20 : 0.4356    recall@50 : 0.5924    mrr@5 : 0.1306    mrr@10 : 0.1434    mrr@20 : 0.1508    mrr@50 : 0.1558    ndcg@5 : 0.1554    ndcg@10 : 0.1866    ndcg@20 : 0.2137    ndcg@50 : 0.2449    precision@5 : 0.0462    precision@10 : 0.0328    precision@20 : 0.0218    precision@50 : 0.0118    
+Mon 06 Oct 2025 17:14:31 INFO  [1;32mepoch 38 training[0m [[1;34mtime[0m: 152.65s, [1;34mtrain loss[0m: 21139.0318]
+Mon 06 Oct 2025 17:14:31 INFO  [1;32mepoch 38 evaluating[0m [[1;34mtime[0m: 0.37s, [1;34mvalid_score[0m: 0.141800]
+Mon 06 Oct 2025 17:14:31 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2273    recall@10 : 0.3232    recall@20 : 0.4351    recall@50 : 0.5892    mrr@5 : 0.129    mrr@10 : 0.1418    mrr@20 : 0.1496    mrr@50 : 0.1545    ndcg@5 : 0.1533    ndcg@10 : 0.1843    ndcg@20 : 0.2126    ndcg@50 : 0.2432    precision@5 : 0.0455    precision@10 : 0.0323    precision@20 : 0.0218    precision@50 : 0.0118    
+Mon 06 Oct 2025 17:17:09 INFO  [1;32mepoch 39 training[0m [[1;34mtime[0m: 157.69s, [1;34mtrain loss[0m: 21130.1226]
+Mon 06 Oct 2025 17:17:09 INFO  [1;32mepoch 39 evaluating[0m [[1;34mtime[0m: 0.49s, [1;34mvalid_score[0m: 0.145300]
+Mon 06 Oct 2025 17:17:09 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.23    recall@10 : 0.3308    recall@20 : 0.4384    recall@50 : 0.5927    mrr@5 : 0.132    mrr@10 : 0.1453    mrr@20 : 0.1528    mrr@50 : 0.1578    ndcg@5 : 0.1562    ndcg@10 : 0.1886    ndcg@20 : 0.2158    ndcg@50 : 0.2466    precision@5 : 0.046    precision@10 : 0.0331    precision@20 : 0.0219    precision@50 : 0.0119    
+Mon 06 Oct 2025 17:17:10 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 17:19:40 INFO  [1;32mepoch 40 training[0m [[1;34mtime[0m: 150.22s, [1;34mtrain loss[0m: 21122.6315]
+Mon 06 Oct 2025 17:19:40 INFO  [1;32mepoch 40 evaluating[0m [[1;34mtime[0m: 0.12s, [1;34mvalid_score[0m: 0.144200]
+Mon 06 Oct 2025 17:19:40 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2305    recall@10 : 0.3255    recall@20 : 0.4391    recall@50 : 0.5874    mrr@5 : 0.1317    mrr@10 : 0.1442    mrr@20 : 0.1521    mrr@50 : 0.1568    ndcg@5 : 0.156    ndcg@10 : 0.1866    ndcg@20 : 0.2154    ndcg@50 : 0.2448    precision@5 : 0.0461    precision@10 : 0.0325    precision@20 : 0.022    precision@50 : 0.0117    
+Mon 06 Oct 2025 17:22:10 INFO  [1;32mepoch 41 training[0m [[1;34mtime[0m: 149.96s, [1;34mtrain loss[0m: 21115.7150]
+Mon 06 Oct 2025 17:22:10 INFO  [1;32mepoch 41 evaluating[0m [[1;34mtime[0m: 0.12s, [1;34mvalid_score[0m: 0.142700]
+Mon 06 Oct 2025 17:22:10 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2293    recall@10 : 0.329    recall@20 : 0.4364    recall@50 : 0.5909    mrr@5 : 0.1295    mrr@10 : 0.1427    mrr@20 : 0.1501    mrr@50 : 0.155    ndcg@5 : 0.1542    ndcg@10 : 0.1863    ndcg@20 : 0.2133    ndcg@50 : 0.244    precision@5 : 0.0459    precision@10 : 0.0329    precision@20 : 0.0218    precision@50 : 0.0118    
+Mon 06 Oct 2025 17:24:42 INFO  [1;32mepoch 42 training[0m [[1;34mtime[0m: 151.30s, [1;34mtrain loss[0m: 21112.4651]
+Mon 06 Oct 2025 17:24:42 INFO  [1;32mepoch 42 evaluating[0m [[1;34mtime[0m: 0.13s, [1;34mvalid_score[0m: 0.141000]
+Mon 06 Oct 2025 17:24:42 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2235    recall@10 : 0.3255    recall@20 : 0.4348    recall@50 : 0.5841    mrr@5 : 0.1275    mrr@10 : 0.141    mrr@20 : 0.1485    mrr@50 : 0.1532    ndcg@5 : 0.1512    ndcg@10 : 0.184    ndcg@20 : 0.2115    ndcg@50 : 0.2412    precision@5 : 0.0447    precision@10 : 0.0325    precision@20 : 0.0217    precision@50 : 0.0117    
+Mon 06 Oct 2025 17:27:12 INFO  [1;32mepoch 43 training[0m [[1;34mtime[0m: 150.52s, [1;34mtrain loss[0m: 21108.3897]
+Mon 06 Oct 2025 17:27:12 INFO  [1;32mepoch 43 evaluating[0m [[1;34mtime[0m: 0.12s, [1;34mvalid_score[0m: 0.144100]
+Mon 06 Oct 2025 17:27:12 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2258    recall@10 : 0.3263    recall@20 : 0.4394    recall@50 : 0.5935    mrr@5 : 0.1306    mrr@10 : 0.1441    mrr@20 : 0.1519    mrr@50 : 0.1568    ndcg@5 : 0.1542    ndcg@10 : 0.1867    ndcg@20 : 0.2152    ndcg@50 : 0.2458    precision@5 : 0.0452    precision@10 : 0.0326    precision@20 : 0.022    precision@50 : 0.0119    
+Mon 06 Oct 2025 17:29:43 INFO  [1;32mepoch 44 training[0m [[1;34mtime[0m: 150.69s, [1;34mtrain loss[0m: 21099.1781]
+Mon 06 Oct 2025 17:29:43 INFO  [1;32mepoch 44 evaluating[0m [[1;34mtime[0m: 0.13s, [1;34mvalid_score[0m: 0.144400]
+Mon 06 Oct 2025 17:29:43 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.23    recall@10 : 0.3291    recall@20 : 0.4386    recall@50 : 0.5917    mrr@5 : 0.1314    mrr@10 : 0.1444    mrr@20 : 0.1521    mrr@50 : 0.157    ndcg@5 : 0.1558    ndcg@10 : 0.1876    ndcg@20 : 0.2153    ndcg@50 : 0.2458    precision@5 : 0.046    precision@10 : 0.0329    precision@20 : 0.0219    precision@50 : 0.0118    
+Mon 06 Oct 2025 17:32:14 INFO  [1;32mepoch 45 training[0m [[1;34mtime[0m: 150.73s, [1;34mtrain loss[0m: 21096.9616]
+Mon 06 Oct 2025 17:32:14 INFO  [1;32mepoch 45 evaluating[0m [[1;34mtime[0m: 0.12s, [1;34mvalid_score[0m: 0.145200]
+Mon 06 Oct 2025 17:32:14 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2272    recall@10 : 0.3308    recall@20 : 0.4361    recall@50 : 0.5849    mrr@5 : 0.1313    mrr@10 : 0.1452    mrr@20 : 0.1524    mrr@50 : 0.1572    ndcg@5 : 0.155    ndcg@10 : 0.1886    ndcg@20 : 0.215    ndcg@50 : 0.2446    precision@5 : 0.0454    precision@10 : 0.0331    precision@20 : 0.0218    precision@50 : 0.0117    
+Mon 06 Oct 2025 17:34:45 INFO  [1;32mepoch 46 training[0m [[1;34mtime[0m: 150.78s, [1;34mtrain loss[0m: 21086.7623]
+Mon 06 Oct 2025 17:34:45 INFO  [1;32mepoch 46 evaluating[0m [[1;34mtime[0m: 0.12s, [1;34mvalid_score[0m: 0.141800]
+Mon 06 Oct 2025 17:34:45 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2262    recall@10 : 0.326    recall@20 : 0.4349    recall@50 : 0.5869    mrr@5 : 0.1288    mrr@10 : 0.1418    mrr@20 : 0.1493    mrr@50 : 0.1541    ndcg@5 : 0.1529    ndcg@10 : 0.1848    ndcg@20 : 0.2123    ndcg@50 : 0.2425    precision@5 : 0.0452    precision@10 : 0.0326    precision@20 : 0.0217    precision@50 : 0.0117    
+Mon 06 Oct 2025 17:37:15 INFO  [1;32mepoch 47 training[0m [[1;34mtime[0m: 150.48s, [1;34mtrain loss[0m: 21081.1750]
+Mon 06 Oct 2025 17:37:16 INFO  [1;32mepoch 47 evaluating[0m [[1;34mtime[0m: 0.13s, [1;34mvalid_score[0m: 0.144100]
+Mon 06 Oct 2025 17:37:16 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2275    recall@10 : 0.3265    recall@20 : 0.4394    recall@50 : 0.5906    mrr@5 : 0.131    mrr@10 : 0.1441    mrr@20 : 0.1519    mrr@50 : 0.1567    ndcg@5 : 0.1549    ndcg@10 : 0.1867    ndcg@20 : 0.2152    ndcg@50 : 0.2452    precision@5 : 0.0455    precision@10 : 0.0326    precision@20 : 0.022    precision@50 : 0.0118    
+Mon 06 Oct 2025 17:39:46 INFO  [1;32mepoch 48 training[0m [[1;34mtime[0m: 150.75s, [1;34mtrain loss[0m: 21078.8877]
+Mon 06 Oct 2025 17:39:46 INFO  [1;32mepoch 48 evaluating[0m [[1;34mtime[0m: 0.13s, [1;34mvalid_score[0m: 0.143700]
+Mon 06 Oct 2025 17:39:46 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2273    recall@10 : 0.3308    recall@20 : 0.4315    recall@50 : 0.5907    mrr@5 : 0.13    mrr@10 : 0.1437    mrr@20 : 0.1507    mrr@50 : 0.1559    ndcg@5 : 0.154    ndcg@10 : 0.1873    ndcg@20 : 0.2128    ndcg@50 : 0.2446    precision@5 : 0.0455    precision@10 : 0.0331    precision@20 : 0.0216    precision@50 : 0.0118    
+Mon 06 Oct 2025 17:42:17 INFO  [1;32mepoch 49 training[0m [[1;34mtime[0m: 150.72s, [1;34mtrain loss[0m: 21074.7572]
+Mon 06 Oct 2025 17:42:17 INFO  [1;32mepoch 49 evaluating[0m [[1;34mtime[0m: 0.13s, [1;34mvalid_score[0m: 0.145100]
+Mon 06 Oct 2025 17:42:17 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.2298    recall@10 : 0.3262    recall@20 : 0.4354    recall@50 : 0.5944    mrr@5 : 0.1324    mrr@10 : 0.1451    mrr@20 : 0.1526    mrr@50 : 0.1577    ndcg@5 : 0.1565    ndcg@10 : 0.1874    ndcg@20 : 0.215    ndcg@50 : 0.2466    precision@5 : 0.046    precision@10 : 0.0326    precision@20 : 0.0218    precision@50 : 0.0119    
+Mon 06 Oct 2025 17:42:29 INFO  Loading model structure and parameters from /home/textile/btech/tt1221351/DuoRec/log/DuoRec/ml-1m/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_15-00-24-lr0.001-l20-tau1-dot-DPh0.1-DPa0.1/model.pth
+Mon 06 Oct 2025 17:42:29 INFO  [1;33mbest valid [0m: {'recall@5': 0.23, 'recall@10': 0.3308, 'recall@20': 0.4384, 'recall@50': 0.5927, 'mrr@5': 0.132, 'mrr@10': 0.1453, 'mrr@20': 0.1528, 'mrr@50': 0.1578, 'ndcg@5': 0.1562, 'ndcg@10': 0.1886, 'ndcg@20': 0.2158, 'ndcg@50': 0.2466, 'precision@5': 0.046, 'precision@10': 0.0331, 'precision@20': 0.0219, 'precision@50': 0.0119}
+Mon 06 Oct 2025 17:42:29 INFO  [1;33mtest result[0m: {'recall@5': 0.2151, 'recall@10': 0.3116, 'recall@20': 0.4109, 'recall@50': 0.5531, 'mrr@5': 0.1246, 'mrr@10': 0.1377, 'mrr@20': 0.1445, 'mrr@50': 0.1491, 'ndcg@5': 0.147, 'ndcg@10': 0.1783, 'ndcg@20': 0.2034, 'ndcg@50': 0.2317, 'precision@5': 0.043, 'precision@10': 0.0312, 'precision@20': 0.0205, 'precision@50': 0.0111}

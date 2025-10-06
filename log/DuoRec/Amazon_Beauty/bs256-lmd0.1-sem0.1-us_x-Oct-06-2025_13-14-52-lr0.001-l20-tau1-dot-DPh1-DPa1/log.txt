@@ -1,0 +1,301 @@
+Mon 06 Oct 2025 13:14:52 INFO  
+[1;35mGeneral Hyper Parameters:
+[0m[1;36mgpu_id[0m =[1;33m 0[0m
+[1;36muse_gpu[0m =[1;33m True[0m
+[1;36mseed[0m =[1;33m 2022[0m
+[1;36mstate[0m =[1;33m INFO[0m
+[1;36mreproducibility[0m =[1;33m True[0m
+[1;36mdata_path[0m =[1;33m ./dataset/Amazon_Beauty[0m
+[1;36mshow_progress[0m =[1;33m True[0m
+
+[1;35mTraining Hyper Parameters:
+[0m[1;36mcheckpoint_dir[0m =[1;33m saved[0m
+[1;36mepochs[0m =[1;33m 50[0m
+[1;36mtrain_batch_size[0m =[1;33m 256[0m
+[1;36mlearner[0m =[1;33m adam[0m
+[1;36mlearning_rate[0m =[1;33m 0.001[0m
+[1;36mtraining_neg_sample_num[0m =[1;33m 0[0m
+[1;36mtraining_neg_sample_distribution[0m =[1;33m uniform[0m
+[1;36meval_step[0m =[1;33m 1[0m
+[1;36mstopping_step[0m =[1;33m 10[0m
+[1;36mclip_grad_norm[0m =[1;33m None[0m
+[1;36mweight_decay[0m =[1;33m 0[0m
+[1;36mdraw_loss_pic[0m =[1;33m False[0m
+[1;36mloss_decimal_place[0m =[1;33m 4[0m
+
+[1;35mEvaluation Hyper Parameters:
+[0m[1;36meval_setting[0m =[1;33m TO_LS,full[0m
+[1;36mgroup_by_user[0m =[1;33m True[0m
+[1;36msplit_ratio[0m =[1;33m [0.8, 0.1, 0.1][0m
+[1;36mleave_one_num[0m =[1;33m 2[0m
+[1;36mreal_time_process[0m =[1;33m False[0m
+[1;36mmetrics[0m =[1;33m ['Recall', 'MRR', 'NDCG', 'Precision'][0m
+[1;36mtopk[0m =[1;33m [5, 10, 20, 50][0m
+[1;36mvalid_metric[0m =[1;33m MRR@10[0m
+[1;36meval_batch_size[0m =[1;33m 256[0m
+[1;36mmetric_decimal_place[0m =[1;33m 4[0m
+
+[1;35mDataset Hyper Parameters:
+[0m[1;36mfield_separator[0m =[1;33m 	[0m
+[1;36mseq_separator[0m =[1;33m  [0m
+[1;36mUSER_ID_FIELD[0m =[1;33m user_id[0m
+[1;36mITEM_ID_FIELD[0m =[1;33m item_id[0m
+[1;36mRATING_FIELD[0m =[1;33m rating[0m
+[1;36mTIME_FIELD[0m =[1;33m timestamp[0m
+[1;36mseq_len[0m =[1;33m None[0m
+[1;36mLABEL_FIELD[0m =[1;33m label[0m
+[1;36mthreshold[0m =[1;33m None[0m
+[1;36mNEG_PREFIX[0m =[1;33m neg_[0m
+[1;36mload_col[0m =[1;33m {'inter': ['user_id', 'item_id', 'rating', 'timestamp']}[0m
+[1;36munload_col[0m =[1;33m None[0m
+[1;36munused_col[0m =[1;33m None[0m
+[1;36madditional_feat_suffix[0m =[1;33m None[0m
+[1;36mlowest_val[0m =[1;33m None[0m
+[1;36mhighest_val[0m =[1;33m None[0m
+[1;36mequal_val[0m =[1;33m None[0m
+[1;36mnot_equal_val[0m =[1;33m None[0m
+[1;36mmax_user_inter_num[0m =[1;33m None[0m
+[1;36mmin_user_inter_num[0m =[1;33m 5[0m
+[1;36mmax_item_inter_num[0m =[1;33m None[0m
+[1;36mmin_item_inter_num[0m =[1;33m 5[0m
+[1;36mfields_in_same_space[0m =[1;33m None[0m
+[1;36mpreload_weight[0m =[1;33m None[0m
+[1;36mnormalize_field[0m =[1;33m None[0m
+[1;36mnormalize_all[0m =[1;33m None[0m
+[1;36mITEM_LIST_LENGTH_FIELD[0m =[1;33m item_length[0m
+[1;36mLIST_SUFFIX[0m =[1;33m _list[0m
+[1;36mMAX_ITEM_LIST_LENGTH[0m =[1;33m 50[0m
+[1;36mPOSITION_FIELD[0m =[1;33m position_id[0m
+[1;36mHEAD_ENTITY_ID_FIELD[0m =[1;33m head_id[0m
+[1;36mTAIL_ENTITY_ID_FIELD[0m =[1;33m tail_id[0m
+[1;36mRELATION_ID_FIELD[0m =[1;33m relation_id[0m
+[1;36mENTITY_ID_FIELD[0m =[1;33m entity_id[0m
+
+[1;35mOther Hyper Parameters: 
+[0m[1;36mvalid_metric_bigger[0m = [1;33mTrue[0m
+[1;36mn_layers[0m = [1;33m2[0m
+[1;36mn_heads[0m = [1;33m2[0m
+[1;36mhidden_size[0m = [1;33m64[0m
+[1;36minner_size[0m = [1;33m256[0m
+[1;36mhidden_dropout_prob[0m = [1;33m1[0m
+[1;36mattn_dropout_prob[0m = [1;33m1[0m
+[1;36mhidden_act[0m = [1;33mgelu[0m
+[1;36mlayer_norm_eps[0m = [1;33m1e-12[0m
+[1;36minitializer_range[0m = [1;33m0.02[0m
+[1;36mloss_type[0m = [1;33mCE[0m
+[1;36mlmd[0m = [1;33m0.1[0m
+[1;36mlmd_sem[0m = [1;33m0.1[0m
+[1;36mSSL_AUG[0m = [1;33mDuoRec[0m
+[1;36mrm_dup_inter[0m = [1;33mNone[0m
+[1;36mfilter_inter_by_user_or_item[0m = [1;33mTrue[0m
+[1;36mSOURCE_ID_FIELD[0m = [1;33msource_id[0m
+[1;36mTARGET_ID_FIELD[0m = [1;33mtarget_id[0m
+[1;36mbenchmark_filename[0m = [1;33mNone[0m
+[1;36mMODEL_TYPE[0m = [1;33mModelType.SEQUENTIAL[0m
+[1;36mlog_root[0m = [1;33m./log/[0m
+[1;36mtau[0m = [1;33m1[0m
+[1;36mcontrast[0m = [1;33mus_x[0m
+[1;36msim[0m = [1;33mdot[0m
+[1;36mMODEL_INPUT_TYPE[0m = [1;33mInputType.POINTWISE[0m
+[1;36meval_type[0m = [1;33mEvaluatorType.RANKING[0m
+[1;36mdevice[0m = [1;33mcuda[0m
+[1;36mtrain_neg_sample_args[0m = [1;33m{'strategy': 'none'}[0m
+[1;36mlog_dir[0m = [1;33m/home/textile/btech/tt1221351/DuoRec2/log/DuoRec/Amazon_Beauty/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_13-14-52-lr0.001-l20-tau1-dot-DPh1-DPa1[0m
+
+
+Mon 06 Oct 2025 13:15:02 INFO  [1;35mAmazon_Beauty[0m
+[1;34mThe number of users[0m: 22364
+[1;34mAverage actions of users[0m: 8.876358270357287
+[1;34mThe number of items[0m: 12102
+[1;34mAverage actions of items[0m: 16.403768283612923
+[1;34mThe number of inters[0m: 198502
+[1;34mThe sparsity of the dataset[0m: 99.92665707018277%
+[1;34mRemain Fields[0m: ['user_id', 'item_id', 'rating', 'timestamp']
+Mon 06 Oct 2025 13:15:03 INFO  [1;35mBuild[0m[1;33m [SequentialDataLoader][0m for [1;33m[train][0m with format [1;33m[InputType.POINTWISE][0m
+Mon 06 Oct 2025 13:15:03 INFO  [1;35m[train][0m[1;33m No Negative Sampling[0m
+Mon 06 Oct 2025 13:15:03 INFO  [1;35m[train][0m[1;36m batch_size[0m = [1;33m[256][0m, [1;36mshuffle[0m = [1;33m[True]
+[0m
+Mon 06 Oct 2025 13:15:07 INFO  [1;35mBuild[0m[1;33m [SequentialFullDataLoader][0m for [1;33m[evaluation][0m with format [1;33m[InputType.POINTWISE][0m
+Mon 06 Oct 2025 13:15:07 INFO  [1;35mEvaluation Setting:[0m
+	[1;34mGroup by[0m user_id
+	[1;34mOrdering[0m: {'strategy': 'by', 'field': 'timestamp', 'ascending': True}
+	[1;34mSplitting[0m: {'strategy': 'loo', 'leave_one_num': 2}
+	[1;34mNegative Sampling[0m: {'strategy': 'full', 'distribution': 'uniform'}
+Mon 06 Oct 2025 13:15:07 INFO  [1;35m[evaluation][0m[1;36m batch_size[0m = [1;33m[256][0m, [1;36mshuffle[0m = [1;33m[False]
+[0m
+Mon 06 Oct 2025 13:15:09 INFO  DuoRec(
+  (item_embedding): Embedding(12102, 64, padding_idx=0)
+  (position_embedding): Embedding(50, 64)
+  (trm_encoder): TransformerEncoder(
+    (layer): ModuleList(
+      (0-1): 2 x TransformerLayer(
+        (multi_head_attention): MultiHeadAttention(
+          (query): Linear(in_features=64, out_features=64, bias=True)
+          (key): Linear(in_features=64, out_features=64, bias=True)
+          (value): Linear(in_features=64, out_features=64, bias=True)
+          (attn_dropout): Dropout(p=1, inplace=False)
+          (dense): Linear(in_features=64, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (out_dropout): Dropout(p=1, inplace=False)
+        )
+        (feed_forward): FeedForward(
+          (dense_1): Linear(in_features=64, out_features=256, bias=True)
+          (dense_2): Linear(in_features=256, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=1, inplace=False)
+        )
+      )
+    )
+  )
+  (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+  (dropout): Dropout(p=1, inplace=False)
+  (loss_fct): CrossEntropyLoss()
+  (aug_nce_fct): CrossEntropyLoss()
+  (sem_aug_nce_fct): CrossEntropyLoss()
+)[1;34m
+Trainable parameters[0m: 877824
+Mon 06 Oct 2025 13:15:41 INFO  [1;32mepoch 0 training[0m [[1;34mtime[0m: 29.69s, [1;34mtrain loss[0m: 4938.0370]
+Mon 06 Oct 2025 13:15:41 INFO  [1;32mepoch 0 evaluating[0m [[1;34mtime[0m: 0.80s, [1;34mvalid_score[0m: 0.001800]
+Mon 06 Oct 2025 13:15:41 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.003    recall@10 : 0.0064    recall@20 : 0.0106    recall@50 : 0.0191    mrr@5 : 0.0014    mrr@10 : 0.0018    mrr@20 : 0.0021    mrr@50 : 0.0024    ndcg@5 : 0.0018    ndcg@10 : 0.0029    ndcg@20 : 0.0039    ndcg@50 : 0.0056    precision@5 : 0.0006    precision@10 : 0.0006    precision@20 : 0.0005    precision@50 : 0.0004    
+Mon 06 Oct 2025 13:15:41 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec2/log/DuoRec/Amazon_Beauty/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_13-14-52-lr0.001-l20-tau1-dot-DPh1-DPa1/model.pth
+Mon 06 Oct 2025 13:16:10 INFO  [1;32mepoch 1 training[0m [[1;34mtime[0m: 28.86s, [1;34mtrain loss[0m: 4865.4490]
+Mon 06 Oct 2025 13:16:11 INFO  [1;32mepoch 1 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.001800]
+Mon 06 Oct 2025 13:16:11 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0035    recall@10 : 0.0064    recall@20 : 0.0114    recall@50 : 0.0217    mrr@5 : 0.0014    mrr@10 : 0.0018    mrr@20 : 0.0021    mrr@50 : 0.0024    ndcg@5 : 0.0019    ndcg@10 : 0.0028    ndcg@20 : 0.0041    ndcg@50 : 0.0061    precision@5 : 0.0007    precision@10 : 0.0006    precision@20 : 0.0006    precision@50 : 0.0004    
+Mon 06 Oct 2025 13:16:40 INFO  [1;32mepoch 2 training[0m [[1;34mtime[0m: 28.86s, [1;34mtrain loss[0m: 4862.2059]
+Mon 06 Oct 2025 13:16:41 INFO  [1;32mepoch 2 evaluating[0m [[1;34mtime[0m: 0.77s, [1;34mvalid_score[0m: 0.002200]
+Mon 06 Oct 2025 13:16:41 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0032    recall@10 : 0.0064    recall@20 : 0.0113    recall@50 : 0.0218    mrr@5 : 0.0018    mrr@10 : 0.0022    mrr@20 : 0.0025    mrr@50 : 0.0029    ndcg@5 : 0.0021    ndcg@10 : 0.0032    ndcg@20 : 0.0044    ndcg@50 : 0.0065    precision@5 : 0.0006    precision@10 : 0.0006    precision@20 : 0.0006    precision@50 : 0.0004    
+Mon 06 Oct 2025 13:16:41 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec2/log/DuoRec/Amazon_Beauty/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_13-14-52-lr0.001-l20-tau1-dot-DPh1-DPa1/model.pth
+Mon 06 Oct 2025 13:17:10 INFO  [1;32mepoch 3 training[0m [[1;34mtime[0m: 28.83s, [1;34mtrain loss[0m: 4859.8798]
+Mon 06 Oct 2025 13:17:10 INFO  [1;32mepoch 3 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.002300]
+Mon 06 Oct 2025 13:17:10 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0032    recall@10 : 0.0068    recall@20 : 0.0114    recall@50 : 0.0231    mrr@5 : 0.0018    mrr@10 : 0.0023    mrr@20 : 0.0026    mrr@50 : 0.003    ndcg@5 : 0.0022    ndcg@10 : 0.0033    ndcg@20 : 0.0045    ndcg@50 : 0.0068    precision@5 : 0.0006    precision@10 : 0.0007    precision@20 : 0.0006    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:17:10 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec2/log/DuoRec/Amazon_Beauty/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_13-14-52-lr0.001-l20-tau1-dot-DPh1-DPa1/model.pth
+Mon 06 Oct 2025 13:17:38 INFO  [1;32mepoch 4 training[0m [[1;34mtime[0m: 27.64s, [1;34mtrain loss[0m: 4858.0867]
+Mon 06 Oct 2025 13:17:39 INFO  [1;32mepoch 4 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.002300]
+Mon 06 Oct 2025 13:17:39 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0034    recall@10 : 0.0063    recall@20 : 0.0127    recall@50 : 0.0224    mrr@5 : 0.0019    mrr@10 : 0.0023    mrr@20 : 0.0027    mrr@50 : 0.003    ndcg@5 : 0.0023    ndcg@10 : 0.0032    ndcg@20 : 0.0048    ndcg@50 : 0.0067    precision@5 : 0.0007    precision@10 : 0.0006    precision@20 : 0.0006    precision@50 : 0.0004    
+Mon 06 Oct 2025 13:18:07 INFO  [1;32mepoch 5 training[0m [[1;34mtime[0m: 28.43s, [1;34mtrain loss[0m: 4856.6255]
+Mon 06 Oct 2025 13:18:08 INFO  [1;32mepoch 5 evaluating[0m [[1;34mtime[0m: 0.77s, [1;34mvalid_score[0m: 0.002400]
+Mon 06 Oct 2025 13:18:08 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0036    recall@10 : 0.0071    recall@20 : 0.0127    recall@50 : 0.0236    mrr@5 : 0.002    mrr@10 : 0.0024    mrr@20 : 0.0028    mrr@50 : 0.0032    ndcg@5 : 0.0024    ndcg@10 : 0.0035    ndcg@20 : 0.0049    ndcg@50 : 0.0071    precision@5 : 0.0007    precision@10 : 0.0007    precision@20 : 0.0006    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:18:08 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec2/log/DuoRec/Amazon_Beauty/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_13-14-52-lr0.001-l20-tau1-dot-DPh1-DPa1/model.pth
+Mon 06 Oct 2025 13:18:37 INFO  [1;32mepoch 6 training[0m [[1;34mtime[0m: 28.65s, [1;34mtrain loss[0m: 4855.5732]
+Mon 06 Oct 2025 13:18:37 INFO  [1;32mepoch 6 evaluating[0m [[1;34mtime[0m: 0.77s, [1;34mvalid_score[0m: 0.002500]
+Mon 06 Oct 2025 13:18:37 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0037    recall@10 : 0.0082    recall@20 : 0.0141    recall@50 : 0.024    mrr@5 : 0.0019    mrr@10 : 0.0025    mrr@20 : 0.0029    mrr@50 : 0.0032    ndcg@5 : 0.0024    ndcg@10 : 0.0038    ndcg@20 : 0.0053    ndcg@50 : 0.0072    precision@5 : 0.0007    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:18:37 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec2/log/DuoRec/Amazon_Beauty/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_13-14-52-lr0.001-l20-tau1-dot-DPh1-DPa1/model.pth
+Mon 06 Oct 2025 13:19:06 INFO  [1;32mepoch 7 training[0m [[1;34mtime[0m: 28.86s, [1;34mtrain loss[0m: 4854.5478]
+Mon 06 Oct 2025 13:19:07 INFO  [1;32mepoch 7 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.002300]
+Mon 06 Oct 2025 13:19:07 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0038    recall@10 : 0.0074    recall@20 : 0.0129    recall@50 : 0.0249    mrr@5 : 0.0019    mrr@10 : 0.0023    mrr@20 : 0.0027    mrr@50 : 0.0031    ndcg@5 : 0.0023    ndcg@10 : 0.0035    ndcg@20 : 0.0049    ndcg@50 : 0.0072    precision@5 : 0.0008    precision@10 : 0.0007    precision@20 : 0.0006    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:19:36 INFO  [1;32mepoch 8 training[0m [[1;34mtime[0m: 28.84s, [1;34mtrain loss[0m: 4853.7862]
+Mon 06 Oct 2025 13:19:37 INFO  [1;32mepoch 8 evaluating[0m [[1;34mtime[0m: 0.77s, [1;34mvalid_score[0m: 0.002700]
+Mon 06 Oct 2025 13:19:37 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0038    recall@10 : 0.008    recall@20 : 0.0132    recall@50 : 0.0243    mrr@5 : 0.0022    mrr@10 : 0.0027    mrr@20 : 0.003    mrr@50 : 0.0034    ndcg@5 : 0.0026    ndcg@10 : 0.0039    ndcg@20 : 0.0052    ndcg@50 : 0.0074    precision@5 : 0.0008    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:19:37 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec2/log/DuoRec/Amazon_Beauty/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_13-14-52-lr0.001-l20-tau1-dot-DPh1-DPa1/model.pth
+Mon 06 Oct 2025 13:20:06 INFO  [1;32mepoch 9 training[0m [[1;34mtime[0m: 28.84s, [1;34mtrain loss[0m: 4853.0890]
+Mon 06 Oct 2025 13:20:06 INFO  [1;32mepoch 9 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.002900]
+Mon 06 Oct 2025 13:20:06 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.005    recall@10 : 0.0084    recall@20 : 0.0128    recall@50 : 0.0243    mrr@5 : 0.0024    mrr@10 : 0.0029    mrr@20 : 0.0032    mrr@50 : 0.0035    ndcg@5 : 0.0031    ndcg@10 : 0.0041    ndcg@20 : 0.0053    ndcg@50 : 0.0075    precision@5 : 0.001    precision@10 : 0.0008    precision@20 : 0.0006    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:20:06 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec2/log/DuoRec/Amazon_Beauty/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_13-14-52-lr0.001-l20-tau1-dot-DPh1-DPa1/model.pth
+Mon 06 Oct 2025 13:20:35 INFO  [1;32mepoch 10 training[0m [[1;34mtime[0m: 28.36s, [1;34mtrain loss[0m: 4852.2837]
+Mon 06 Oct 2025 13:20:35 INFO  [1;32mepoch 10 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.002500]
+Mon 06 Oct 2025 13:20:35 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0042    recall@10 : 0.0076    recall@20 : 0.0151    recall@50 : 0.0252    mrr@5 : 0.002    mrr@10 : 0.0025    mrr@20 : 0.003    mrr@50 : 0.0033    ndcg@5 : 0.0025    ndcg@10 : 0.0037    ndcg@20 : 0.0055    ndcg@50 : 0.0075    precision@5 : 0.0008    precision@10 : 0.0008    precision@20 : 0.0008    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:21:04 INFO  [1;32mepoch 11 training[0m [[1;34mtime[0m: 28.11s, [1;34mtrain loss[0m: 4851.8426]
+Mon 06 Oct 2025 13:21:04 INFO  [1;32mepoch 11 evaluating[0m [[1;34mtime[0m: 0.77s, [1;34mvalid_score[0m: 0.002700]
+Mon 06 Oct 2025 13:21:04 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0042    recall@10 : 0.007    recall@20 : 0.0145    recall@50 : 0.0253    mrr@5 : 0.0023    mrr@10 : 0.0027    mrr@20 : 0.0032    mrr@50 : 0.0036    ndcg@5 : 0.0028    ndcg@10 : 0.0037    ndcg@20 : 0.0056    ndcg@50 : 0.0077    precision@5 : 0.0008    precision@10 : 0.0007    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:21:33 INFO  [1;32mepoch 12 training[0m [[1;34mtime[0m: 28.84s, [1;34mtrain loss[0m: 4851.2204]
+Mon 06 Oct 2025 13:21:34 INFO  [1;32mepoch 12 evaluating[0m [[1;34mtime[0m: 0.62s, [1;34mvalid_score[0m: 0.002900]
+Mon 06 Oct 2025 13:21:34 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0049    recall@10 : 0.0077    recall@20 : 0.0146    recall@50 : 0.0265    mrr@5 : 0.0025    mrr@10 : 0.0029    mrr@20 : 0.0033    mrr@50 : 0.0037    ndcg@5 : 0.0031    ndcg@10 : 0.004    ndcg@20 : 0.0057    ndcg@50 : 0.0081    precision@5 : 0.001    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:22:03 INFO  [1;32mepoch 13 training[0m [[1;34mtime[0m: 28.75s, [1;34mtrain loss[0m: 4850.6700]
+Mon 06 Oct 2025 13:22:03 INFO  [1;32mepoch 13 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.002400]
+Mon 06 Oct 2025 13:22:03 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0043    recall@10 : 0.008    recall@20 : 0.0127    recall@50 : 0.0258    mrr@5 : 0.0019    mrr@10 : 0.0024    mrr@20 : 0.0027    mrr@50 : 0.0031    ndcg@5 : 0.0025    ndcg@10 : 0.0037    ndcg@20 : 0.0049    ndcg@50 : 0.0075    precision@5 : 0.0009    precision@10 : 0.0008    precision@20 : 0.0006    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:22:32 INFO  [1;32mepoch 14 training[0m [[1;34mtime[0m: 28.57s, [1;34mtrain loss[0m: 4850.2088]
+Mon 06 Oct 2025 13:22:33 INFO  [1;32mepoch 14 evaluating[0m [[1;34mtime[0m: 0.77s, [1;34mvalid_score[0m: 0.002700]
+Mon 06 Oct 2025 13:22:33 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0042    recall@10 : 0.007    recall@20 : 0.0131    recall@50 : 0.0256    mrr@5 : 0.0024    mrr@10 : 0.0027    mrr@20 : 0.0031    mrr@50 : 0.0036    ndcg@5 : 0.0028    ndcg@10 : 0.0037    ndcg@20 : 0.0052    ndcg@50 : 0.0078    precision@5 : 0.0008    precision@10 : 0.0007    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:23:02 INFO  [1;32mepoch 15 training[0m [[1;34mtime[0m: 28.85s, [1;34mtrain loss[0m: 4849.9663]
+Mon 06 Oct 2025 13:23:02 INFO  [1;32mepoch 15 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.002700]
+Mon 06 Oct 2025 13:23:02 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0052    recall@10 : 0.0084    recall@20 : 0.0135    recall@50 : 0.0259    mrr@5 : 0.0023    mrr@10 : 0.0027    mrr@20 : 0.003    mrr@50 : 0.0034    ndcg@5 : 0.003    ndcg@10 : 0.004    ndcg@20 : 0.0053    ndcg@50 : 0.0078    precision@5 : 0.001    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:23:31 INFO  [1;32mepoch 16 training[0m [[1;34mtime[0m: 28.84s, [1;34mtrain loss[0m: 4849.3239]
+Mon 06 Oct 2025 13:23:32 INFO  [1;32mepoch 16 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.002700]
+Mon 06 Oct 2025 13:23:32 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0039    recall@10 : 0.0073    recall@20 : 0.0148    recall@50 : 0.0263    mrr@5 : 0.0022    mrr@10 : 0.0027    mrr@20 : 0.0032    mrr@50 : 0.0035    ndcg@5 : 0.0027    ndcg@10 : 0.0037    ndcg@20 : 0.0056    ndcg@50 : 0.0079    precision@5 : 0.0008    precision@10 : 0.0007    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:24:01 INFO  [1;32mepoch 17 training[0m [[1;34mtime[0m: 28.84s, [1;34mtrain loss[0m: 4848.9574]
+Mon 06 Oct 2025 13:24:01 INFO  [1;32mepoch 17 evaluating[0m [[1;34mtime[0m: 0.77s, [1;34mvalid_score[0m: 0.002900]
+Mon 06 Oct 2025 13:24:01 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0054    recall@10 : 0.009    recall@20 : 0.0135    recall@50 : 0.0261    mrr@5 : 0.0025    mrr@10 : 0.0029    mrr@20 : 0.0032    mrr@50 : 0.0036    ndcg@5 : 0.0032    ndcg@10 : 0.0043    ndcg@20 : 0.0054    ndcg@50 : 0.0079    precision@5 : 0.0011    precision@10 : 0.0009    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:24:30 INFO  [1;32mepoch 18 training[0m [[1;34mtime[0m: 28.86s, [1;34mtrain loss[0m: 4848.5572]
+Mon 06 Oct 2025 13:24:31 INFO  [1;32mepoch 18 evaluating[0m [[1;34mtime[0m: 0.77s, [1;34mvalid_score[0m: 0.002900]
+Mon 06 Oct 2025 13:24:31 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0042    recall@10 : 0.0091    recall@20 : 0.0135    recall@50 : 0.0261    mrr@5 : 0.0023    mrr@10 : 0.0029    mrr@20 : 0.0032    mrr@50 : 0.0037    ndcg@5 : 0.0028    ndcg@10 : 0.0043    ndcg@20 : 0.0055    ndcg@50 : 0.008    precision@5 : 0.0008    precision@10 : 0.0009    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:25:00 INFO  [1;32mepoch 19 training[0m [[1;34mtime[0m: 28.84s, [1;34mtrain loss[0m: 4848.1935]
+Mon 06 Oct 2025 13:25:01 INFO  [1;32mepoch 19 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.003000]
+Mon 06 Oct 2025 13:25:01 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0052    recall@10 : 0.0083    recall@20 : 0.0125    recall@50 : 0.0264    mrr@5 : 0.0026    mrr@10 : 0.003    mrr@20 : 0.0033    mrr@50 : 0.0037    ndcg@5 : 0.0033    ndcg@10 : 0.0042    ndcg@20 : 0.0053    ndcg@50 : 0.0081    precision@5 : 0.001    precision@10 : 0.0008    precision@20 : 0.0006    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:25:01 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec2/log/DuoRec/Amazon_Beauty/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_13-14-52-lr0.001-l20-tau1-dot-DPh1-DPa1/model.pth
+Mon 06 Oct 2025 13:25:24 INFO  [1;32mepoch 20 training[0m [[1;34mtime[0m: 23.09s, [1;34mtrain loss[0m: 4847.9817]
+Mon 06 Oct 2025 13:25:24 INFO  [1;32mepoch 20 evaluating[0m [[1;34mtime[0m: 0.47s, [1;34mvalid_score[0m: 0.003000]
+Mon 06 Oct 2025 13:25:24 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0044    recall@10 : 0.0092    recall@20 : 0.0135    recall@50 : 0.0265    mrr@5 : 0.0024    mrr@10 : 0.003    mrr@20 : 0.0033    mrr@50 : 0.0037    ndcg@5 : 0.0029    ndcg@10 : 0.0044    ndcg@20 : 0.0055    ndcg@50 : 0.0081    precision@5 : 0.0009    precision@10 : 0.0009    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:25:46 INFO  [1;32mepoch 21 training[0m [[1;34mtime[0m: 22.04s, [1;34mtrain loss[0m: 4847.6750]
+Mon 06 Oct 2025 13:25:47 INFO  [1;32mepoch 21 evaluating[0m [[1;34mtime[0m: 0.47s, [1;34mvalid_score[0m: 0.003100]
+Mon 06 Oct 2025 13:25:47 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0052    recall@10 : 0.0085    recall@20 : 0.0143    recall@50 : 0.0271    mrr@5 : 0.0026    mrr@10 : 0.0031    mrr@20 : 0.0035    mrr@50 : 0.0039    ndcg@5 : 0.0033    ndcg@10 : 0.0043    ndcg@20 : 0.0058    ndcg@50 : 0.0083    precision@5 : 0.001    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:25:47 INFO  [1;34mSaving current best[0m: /home/textile/btech/tt1221351/DuoRec2/log/DuoRec/Amazon_Beauty/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_13-14-52-lr0.001-l20-tau1-dot-DPh1-DPa1/model.pth
+Mon 06 Oct 2025 13:26:09 INFO  [1;32mepoch 22 training[0m [[1;34mtime[0m: 22.04s, [1;34mtrain loss[0m: 4847.3853]
+Mon 06 Oct 2025 13:26:09 INFO  [1;32mepoch 22 evaluating[0m [[1;34mtime[0m: 0.47s, [1;34mvalid_score[0m: 0.002800]
+Mon 06 Oct 2025 13:26:09 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0042    recall@10 : 0.0077    recall@20 : 0.0138    recall@50 : 0.0256    mrr@5 : 0.0024    mrr@10 : 0.0028    mrr@20 : 0.0032    mrr@50 : 0.0036    ndcg@5 : 0.0028    ndcg@10 : 0.004    ndcg@20 : 0.0055    ndcg@50 : 0.0078    precision@5 : 0.0008    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:26:31 INFO  [1;32mepoch 23 training[0m [[1;34mtime[0m: 21.99s, [1;34mtrain loss[0m: 4847.1135]
+Mon 06 Oct 2025 13:26:32 INFO  [1;32mepoch 23 evaluating[0m [[1;34mtime[0m: 0.47s, [1;34mvalid_score[0m: 0.002900]
+Mon 06 Oct 2025 13:26:32 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0042    recall@10 : 0.0078    recall@20 : 0.0146    recall@50 : 0.0265    mrr@5 : 0.0024    mrr@10 : 0.0029    mrr@20 : 0.0033    mrr@50 : 0.0037    ndcg@5 : 0.0029    ndcg@10 : 0.004    ndcg@20 : 0.0057    ndcg@50 : 0.008    precision@5 : 0.0008    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:26:54 INFO  [1;32mepoch 24 training[0m [[1;34mtime[0m: 21.99s, [1;34mtrain loss[0m: 4846.8842]
+Mon 06 Oct 2025 13:26:54 INFO  [1;32mepoch 24 evaluating[0m [[1;34mtime[0m: 0.47s, [1;34mvalid_score[0m: 0.002800]
+Mon 06 Oct 2025 13:26:54 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0051    recall@10 : 0.008    recall@20 : 0.0148    recall@50 : 0.0267    mrr@5 : 0.0024    mrr@10 : 0.0028    mrr@20 : 0.0033    mrr@50 : 0.0036    ndcg@5 : 0.0031    ndcg@10 : 0.004    ndcg@20 : 0.0057    ndcg@50 : 0.008    precision@5 : 0.001    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:27:16 INFO  [1;32mepoch 25 training[0m [[1;34mtime[0m: 22.00s, [1;34mtrain loss[0m: 4846.7354]
+Mon 06 Oct 2025 13:27:17 INFO  [1;32mepoch 25 evaluating[0m [[1;34mtime[0m: 0.47s, [1;34mvalid_score[0m: 0.003000]
+Mon 06 Oct 2025 13:27:17 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0054    recall@10 : 0.0079    recall@20 : 0.0135    recall@50 : 0.0262    mrr@5 : 0.0027    mrr@10 : 0.003    mrr@20 : 0.0034    mrr@50 : 0.0038    ndcg@5 : 0.0033    ndcg@10 : 0.0041    ndcg@20 : 0.0056    ndcg@50 : 0.0081    precision@5 : 0.0011    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:27:39 INFO  [1;32mepoch 26 training[0m [[1;34mtime[0m: 22.00s, [1;34mtrain loss[0m: 4846.3873]
+Mon 06 Oct 2025 13:27:39 INFO  [1;32mepoch 26 evaluating[0m [[1;34mtime[0m: 0.47s, [1;34mvalid_score[0m: 0.003000]
+Mon 06 Oct 2025 13:27:39 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0047    recall@10 : 0.0089    recall@20 : 0.0127    recall@50 : 0.0264    mrr@5 : 0.0025    mrr@10 : 0.003    mrr@20 : 0.0033    mrr@50 : 0.0038    ndcg@5 : 0.0031    ndcg@10 : 0.0044    ndcg@20 : 0.0053    ndcg@50 : 0.0081    precision@5 : 0.0009    precision@10 : 0.0009    precision@20 : 0.0006    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:28:01 INFO  [1;32mepoch 27 training[0m [[1;34mtime[0m: 21.99s, [1;34mtrain loss[0m: 4846.2693]
+Mon 06 Oct 2025 13:28:02 INFO  [1;32mepoch 27 evaluating[0m [[1;34mtime[0m: 0.47s, [1;34mvalid_score[0m: 0.002900]
+Mon 06 Oct 2025 13:28:02 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0042    recall@10 : 0.0076    recall@20 : 0.0134    recall@50 : 0.0266    mrr@5 : 0.0024    mrr@10 : 0.0029    mrr@20 : 0.0033    mrr@50 : 0.0037    ndcg@5 : 0.0028    ndcg@10 : 0.004    ndcg@20 : 0.0054    ndcg@50 : 0.008    precision@5 : 0.0008    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:28:24 INFO  [1;32mepoch 28 training[0m [[1;34mtime[0m: 21.98s, [1;34mtrain loss[0m: 4845.9303]
+Mon 06 Oct 2025 13:28:24 INFO  [1;32mepoch 28 evaluating[0m [[1;34mtime[0m: 0.47s, [1;34mvalid_score[0m: 0.003000]
+Mon 06 Oct 2025 13:28:24 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0047    recall@10 : 0.0088    recall@20 : 0.0143    recall@50 : 0.0265    mrr@5 : 0.0024    mrr@10 : 0.003    mrr@20 : 0.0033    mrr@50 : 0.0037    ndcg@5 : 0.003    ndcg@10 : 0.0043    ndcg@20 : 0.0057    ndcg@50 : 0.0081    precision@5 : 0.0009    precision@10 : 0.0009    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:28:46 INFO  [1;32mepoch 29 training[0m [[1;34mtime[0m: 21.90s, [1;34mtrain loss[0m: 4845.6607]
+Mon 06 Oct 2025 13:28:47 INFO  [1;32mepoch 29 evaluating[0m [[1;34mtime[0m: 0.47s, [1;34mvalid_score[0m: 0.003100]
+Mon 06 Oct 2025 13:28:47 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0043    recall@10 : 0.0084    recall@20 : 0.0133    recall@50 : 0.0261    mrr@5 : 0.0025    mrr@10 : 0.0031    mrr@20 : 0.0034    mrr@50 : 0.0038    ndcg@5 : 0.003    ndcg@10 : 0.0043    ndcg@20 : 0.0055    ndcg@50 : 0.0081    precision@5 : 0.0009    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:29:08 INFO  [1;32mepoch 30 training[0m [[1;34mtime[0m: 21.90s, [1;34mtrain loss[0m: 4845.6365]
+Mon 06 Oct 2025 13:29:09 INFO  [1;32mepoch 30 evaluating[0m [[1;34mtime[0m: 0.47s, [1;34mvalid_score[0m: 0.002900]
+Mon 06 Oct 2025 13:29:09 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0042    recall@10 : 0.0082    recall@20 : 0.0136    recall@50 : 0.0263    mrr@5 : 0.0023    mrr@10 : 0.0029    mrr@20 : 0.0033    mrr@50 : 0.0037    ndcg@5 : 0.0028    ndcg@10 : 0.0041    ndcg@20 : 0.0055    ndcg@50 : 0.008    precision@5 : 0.0008    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:29:31 INFO  [1;32mepoch 31 training[0m [[1;34mtime[0m: 21.88s, [1;34mtrain loss[0m: 4845.3612]
+Mon 06 Oct 2025 13:29:31 INFO  [1;32mepoch 31 evaluating[0m [[1;34mtime[0m: 0.46s, [1;34mvalid_score[0m: 0.003100]
+Mon 06 Oct 2025 13:29:31 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0043    recall@10 : 0.0091    recall@20 : 0.0144    recall@50 : 0.0262    mrr@5 : 0.0025    mrr@10 : 0.0031    mrr@20 : 0.0035    mrr@50 : 0.0038    ndcg@5 : 0.003    ndcg@10 : 0.0045    ndcg@20 : 0.0058    ndcg@50 : 0.0081    precision@5 : 0.0009    precision@10 : 0.0009    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:29:53 INFO  [1;32mepoch 32 training[0m [[1;34mtime[0m: 21.89s, [1;34mtrain loss[0m: 4845.2295]
+Mon 06 Oct 2025 13:29:54 INFO  [1;32mepoch 32 evaluating[0m [[1;34mtime[0m: 0.47s, [1;34mvalid_score[0m: 0.002900]
+Mon 06 Oct 2025 13:29:54 INFO  [1;34mvalid result[0m: 
+recall@5 : 0.0043    recall@10 : 0.0079    recall@20 : 0.0135    recall@50 : 0.0262    mrr@5 : 0.0024    mrr@10 : 0.0029    mrr@20 : 0.0033    mrr@50 : 0.0037    ndcg@5 : 0.0029    ndcg@10 : 0.0041    ndcg@20 : 0.0055    ndcg@50 : 0.008    precision@5 : 0.0009    precision@10 : 0.0008    precision@20 : 0.0007    precision@50 : 0.0005    
+Mon 06 Oct 2025 13:29:54 INFO  Finished training, best eval result in epoch 21
+Mon 06 Oct 2025 13:29:58 INFO  Loading model structure and parameters from /home/textile/btech/tt1221351/DuoRec2/log/DuoRec/Amazon_Beauty/bs256-lmd0.1-sem0.1-us_x-Oct-06-2025_13-14-52-lr0.001-l20-tau1-dot-DPh1-DPa1/model.pth
+Mon 06 Oct 2025 13:29:59 INFO  [1;33mbest valid [0m: {'recall@5': 0.0052, 'recall@10': 0.0085, 'recall@20': 0.0143, 'recall@50': 0.0271, 'mrr@5': 0.0026, 'mrr@10': 0.0031, 'mrr@20': 0.0035, 'mrr@50': 0.0039, 'ndcg@5': 0.0033, 'ndcg@10': 0.0043, 'ndcg@20': 0.0058, 'ndcg@50': 0.0083, 'precision@5': 0.001, 'precision@10': 0.0008, 'precision@20': 0.0007, 'precision@50': 0.0005}
+Mon 06 Oct 2025 13:29:59 INFO  [1;33mtest result[0m: {'recall@5': 0.0038, 'recall@10': 0.0065, 'recall@20': 0.0122, 'recall@50': 0.0233, 'mrr@5': 0.0017, 'mrr@10': 0.002, 'mrr@20': 0.0024, 'mrr@50': 0.0028, 'ndcg@5': 0.0022, 'ndcg@10': 0.0031, 'ndcg@20': 0.0045, 'ndcg@50': 0.0067, 'precision@5': 0.0008, 'precision@10': 0.0007, 'precision@20': 0.0006, 'precision@50': 0.0005}
